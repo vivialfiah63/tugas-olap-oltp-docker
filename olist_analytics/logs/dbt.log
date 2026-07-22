@@ -1,0 +1,3780 @@
+[0m14:50:03.854416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247DAF30FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247DDBDDA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247DDBDD0A0>]}
+
+
+============================== 14:50:03.864123 | 8a580088-bb62-4410-bc35-723a84d371f8 ==============================
+[0m14:50:03.864123 [info ] [MainThread]: Running with dbt=1.11.12
+[0m14:50:03.864123 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\acer\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Nusacode\\pertemuan4\\olist_analytics\\logs'}
+[0m14:50:03.913471 [info ] [MainThread]: dbt version: 1.11.12
+[0m14:50:03.918314 [info ] [MainThread]: python version: 3.12.9
+[0m14:50:03.918314 [info ] [MainThread]: python path: C:\Users\acer\AppData\Local\Programs\Python\Python312\python.exe
+[0m14:50:03.918314 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m14:50:04.063991 [info ] [MainThread]: Using profiles dir at C:\Users\acer\.dbt
+[0m14:50:04.063991 [info ] [MainThread]: Using profiles.yml file at C:\Users\acer\.dbt\profiles.yml
+[0m14:50:04.067302 [info ] [MainThread]: Using dbt_project.yml file at C:\Nusacode\pertemuan4\olist_analytics\dbt_project.yml
+[0m14:50:04.067302 [info ] [MainThread]: adapter type: clickhouse
+[0m14:50:04.067302 [info ] [MainThread]: adapter version: 1.10.1
+[0m14:50:04.305061 [info ] [MainThread]: Configuration:
+[0m14:50:04.307653 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:50:04.308757 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:50:04.308757 [info ] [MainThread]: Required dependencies:
+[0m14:50:04.308757 [debug] [MainThread]: Executing "git --help"
+[0m14:50:04.430038 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:50:04.430038 [debug] [MainThread]: STDERR: "b''"
+[0m14:50:04.432722 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:50:04.432722 [info ] [MainThread]: Connection:
+[0m14:50:04.432722 [info ] [MainThread]:   driver: http
+[0m14:50:04.432722 [info ] [MainThread]:   host: localhost
+[0m14:50:04.437085 [info ] [MainThread]:   port: 8123
+[0m14:50:04.437085 [info ] [MainThread]:   user: clickhousedev
+[0m14:50:04.437085 [info ] [MainThread]:   schema: public
+[0m14:50:04.437085 [info ] [MainThread]:   retries: 1
+[0m14:50:04.439101 [info ] [MainThread]:   cluster: None
+[0m14:50:04.439101 [info ] [MainThread]:   database_engine: None
+[0m14:50:04.441119 [info ] [MainThread]:   cluster_mode: False
+[0m14:50:04.441119 [info ] [MainThread]:   secure: False
+[0m14:50:04.441119 [info ] [MainThread]:   verify: True
+[0m14:50:04.443132 [info ] [MainThread]:   client_cert: None
+[0m14:50:04.443132 [info ] [MainThread]:   client_cert_key: None
+[0m14:50:04.443132 [info ] [MainThread]:   connect_timeout: 10
+[0m14:50:04.445147 [info ] [MainThread]:   send_receive_timeout: 300
+[0m14:50:04.445147 [info ] [MainThread]:   sync_request_timeout: 5
+[0m14:50:04.445147 [info ] [MainThread]:   compress_block_size: 1048576
+[0m14:50:04.447162 [info ] [MainThread]:   compression: 
+[0m14:50:04.448583 [info ] [MainThread]:   check_exchange: True
+[0m14:50:04.449631 [info ] [MainThread]:   custom_settings: None
+[0m14:50:04.449631 [info ] [MainThread]:   use_lw_deletes: False
+[0m14:50:04.451879 [info ] [MainThread]:   allow_automatic_deduplication: False
+[0m14:50:04.451879 [info ] [MainThread]:   tcp_keepalive: False
+[0m14:50:04.456327 [info ] [MainThread]: Registered adapter: clickhouse=1.10.1
+[0m14:50:05.336493 [debug] [MainThread]: Acquiring new clickhouse connection 'debug'
+[0m14:50:05.337822 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:50:06.360897 [debug] [MainThread]: dbt_clickhouse adapter: On debug: select 1 as id...
+[0m14:50:06.417440 [debug] [MainThread]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m14:50:06.647638 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:50:06.648859 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:50:06.650194 [debug] [MainThread]: Command `dbt debug` succeeded at 14:50:06.650194 after 3.13 seconds
+[0m14:50:06.651177 [debug] [MainThread]: Connection 'debug' was left open.
+[0m14:50:06.651683 [debug] [MainThread]: On debug: Close
+[0m14:50:06.652231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247DF436B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247DF589FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247DF8A52E0>]}
+[0m14:50:06.652773 [debug] [MainThread]: Flushing usage events
+[0m14:50:08.744629 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:01:28.835560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFD4C1E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFD95A120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFA7C6150>]}
+
+
+============================== 15:01:28.849239 | 21c6a8a7-a7f4-4d90-bc58-87f848001721 ==============================
+[0m15:01:28.849239 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:01:28.849239 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\acer\\.dbt', 'invocation_command': 'dbt run --select silver', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Nusacode\\pertemuan4\\olist_analytics\\logs'}
+[0m15:01:29.470504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '21c6a8a7-a7f4-4d90-bc58-87f848001721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF33BE60>]}
+[0m15:01:29.574709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '21c6a8a7-a7f4-4d90-bc58-87f848001721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF13F350>]}
+[0m15:01:29.581404 [info ] [MainThread]: Registered adapter: clickhouse=1.10.1
+[0m15:01:30.202070 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m15:01:30.204083 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:01:30.204083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '21c6a8a7-a7f4-4d90-bc58-87f848001721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF4BF2C0>]}
+[0m15:01:36.377897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '21c6a8a7-a7f4-4d90-bc58-87f848001721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF786270>]}
+[0m15:01:36.582842 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:01:36.593099 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:01:36.627568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '21c6a8a7-a7f4-4d90-bc58-87f848001721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFD8BA7B0>]}
+[0m15:01:36.629032 [info ] [MainThread]: Found 9 models, 4 data tests, 8 sources, 530 macros
+[0m15:01:36.630973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '21c6a8a7-a7f4-4d90-bc58-87f848001721', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF91C860>]}
+[0m15:01:36.632035 [warn ] [MainThread]: The selection criterion 'silver' does not match any enabled nodes
+[0m15:01:36.635030 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m15:01:36.636262 [debug] [MainThread]: Command end result
+[0m15:01:36.696802 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:01:36.700851 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:01:36.703309 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nusacode\pertemuan4\olist_analytics\target\run_results.json
+[0m15:01:36.710789 [debug] [MainThread]: Command `dbt run` succeeded at 15:01:36.709274 after 8.13 seconds
+[0m15:01:36.710789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFD2500E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF12A390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FFF12A420>]}
+[0m15:01:36.710789 [debug] [MainThread]: Flushing usage events
+[0m15:01:39.099901 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:06:34.234165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04A25F0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A047B64470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04A30EDE0>]}
+
+
+============================== 15:06:34.245142 | 34e86082-c269-4c22-8e24-722ca17ebdc0 ==============================
+[0m15:06:34.245142 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:06:34.245142 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\acer\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select silver', 'use_experimental_parser': 'False', 'log_path': 'C:\\Nusacode\\pertemuan4\\olist_analytics\\logs'}
+[0m15:06:34.672999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04C252720>]}
+[0m15:06:34.810357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04C2970E0>]}
+[0m15:06:34.813275 [info ] [MainThread]: Registered adapter: clickhouse=1.10.1
+[0m15:06:35.429494 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m15:06:35.922549 [debug] [MainThread]: Partial parsing enabled: 11 files deleted, 8 files added, 0 files changed.
+[0m15:06:35.922549 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_dim_products.sql
+[0m15:06:35.922549 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_dim_sellers.sql
+[0m15:06:35.922549 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_fact_payments.sql
+[0m15:06:35.922549 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_fact_orders.sql
+[0m15:06:35.928703 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\schema.yml
+[0m15:06:35.928703 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_fact_order_items.sql
+[0m15:06:35.931051 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_fact_reviews.sql
+[0m15:06:35.931051 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\silver\silver_dim_customers.sql
+[0m15:06:35.932623 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_dim_products.sql
+[0m15:06:35.932623 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_dim_customers.sql
+[0m15:06:35.932623 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\example\my_first_dbt_model.sql
+[0m15:06:35.932623 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_fact_orders.sql
+[0m15:06:35.936287 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_dim_sellers.sql
+[0m15:06:35.936287 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_fact_order_items.sql
+[0m15:06:35.936287 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_fact_payments.sql
+[0m15:06:35.936287 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\silver_fact_reviews.sql
+[0m15:06:35.936287 [debug] [MainThread]: Partial parsing: deleted file: olist_analytics://models\example\my_second_dbt_model.sql
+[0m15:06:37.128038 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_analytics.example
+[0m15:06:37.167412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04CABDB80>]}
+[0m15:06:37.341437 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:06:37.346366 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:06:37.373887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04CC357C0>]}
+[0m15:06:37.373887 [info ] [MainThread]: Found 7 models, 8 sources, 530 macros
+[0m15:06:37.373887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04CAE0C20>]}
+[0m15:06:37.379219 [info ] [MainThread]: 
+[0m15:06:37.381230 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:06:37.381230 [info ] [MainThread]: 
+[0m15:06:37.383528 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m15:06:37.399073 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m15:06:37.421612 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:06:38.378303 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m15:06:38.435094 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m15:06:38.678792 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__public'
+[0m15:06:38.695611 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:06:38.966231 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__public: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "connection_name": "list__public"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'public'
+      group by name, schema, type, db_engine
+
+  ...
+[0m15:06:39.447375 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.48 seconds
+[0m15:06:39.452676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04CAFADE0>]}
+[0m15:06:39.529382 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_dim_customers
+[0m15:06:39.531398 [info ] [Thread-1 (]: 1 of 7 START sql table model `public`.`silver_dim_customers` ................... [RUN]
+[0m15:06:39.531398 [debug] [Thread-1 (]: Acquiring new clickhouse connection 'model.olist_analytics.silver_dim_customers'
+[0m15:06:39.531398 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_dim_customers
+[0m15:06:39.535591 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_dim_customers"
+[0m15:06:39.552585 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_dim_customers
+[0m15:06:39.622845 [debug] [Thread-1 (]: Creating new relation silver_dim_customers
+[0m15:06:39.695622 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:06:39.939234 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+
+            
+
+    
+        create table `public`.`silver_dim_customers`
+        
+  
+        
+  engine = MergeTree()
+        order by (customer_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+
+-- ============================================================================
+-- Silver Model: silver_dim_customers
+-- Deskripsi    : Membersihkan dan menstandarisasi data pelanggan dari
+--                raw_schema.dim_customer.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_customer`
+),
+
+cleaned AS (
+    SELECT
+        customer_id,
+        customer_unique_id,
+        customer_zip_code_prefix,
+        -- Trim whitespace dan standarisasi format kota
+        TRIM(INITCAP(customer_city)) AS customer_city,
+        -- Standarisasi state ke uppercase
+        UPPER(TRIM(customer_state)) AS customer_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:06:40.072819 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.13 seconds
+[0m15:06:40.123447 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+
+    select name, type from system.columns where table = 'silver_dim_customers'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:40.150270 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:06:40.157749 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_dim_customers"
+[0m15:06:40.165030 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_dim_customers`
+        ("customer_id", "customer_unique_id", "customer_zip_code_prefix", "customer_city", "customer_state")
+
+-- ============================================================================
+-- Silver Model: silver_dim_customers
+-- Deskripsi    : Membersihkan dan menstandarisasi data pelanggan dari
+--                raw_schema.dim_customer.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_customer`
+),
+
+cleaned AS (
+    SELECT
+        customer_id,
+        customer_unique_id,
+        customer_zip_code_prefix,
+        -- Trim whitespace dan standarisasi format kota
+        TRIM(INITCAP(customer_city)) AS customer_city,
+        -- Standarisasi state ke uppercase
+        UPPER(TRIM(customer_state)) AS customer_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+  ...
+[0m15:06:40.634869 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.47 seconds
+[0m15:06:40.674579 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A047C58A70>]}
+[0m15:06:40.676593 [info ] [Thread-1 (]: 1 of 7 OK created sql table model `public`.`silver_dim_customers` .............. [[32mOK[0m in 1.14s]
+[0m15:06:40.678241 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_dim_customers
+[0m15:06:40.678241 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_dim_products
+[0m15:06:40.682056 [info ] [Thread-1 (]: 2 of 7 START sql table model `public`.`silver_dim_products` .................... [RUN]
+[0m15:06:40.684080 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_dim_customers, now model.olist_analytics.silver_dim_products)
+[0m15:06:40.686177 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_dim_products
+[0m15:06:40.708695 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_dim_products"
+[0m15:06:40.711472 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_dim_products
+[0m15:06:40.717754 [debug] [Thread-1 (]: Creating new relation silver_dim_products
+[0m15:06:40.717754 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+
+            
+
+    
+        create table `public`.`silver_dim_products`
+        
+  
+        
+  engine = MergeTree()
+        order by (product_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+
+-- ============================================================================
+-- Silver Model: silver_dim_products
+-- Deskripsi    : Menggabungkan data produk dengan terjemahan kategori
+--                (Portugis -> Inggris).
+-- ============================================================================
+
+WITH source_product AS (
+    SELECT * FROM `public`.`dim_product`
+),
+
+source_category AS (
+    SELECT * FROM `public`.`dim_product_category`
+),
+
+joined AS (
+    SELECT
+        p.product_id,
+        p.product_category_name,
+        COALESCE(c.product_category_name_english, 'unknown') AS product_category_english,
+        p.product_name_lenght,
+        p.product_description_lenght,
+        p.product_photos_qty,
+        p.product_weight_g,
+        p.product_length_cm,
+        p.product_height_cm,
+        p.product_width_cm
+    FROM source_product p
+    LEFT JOIN source_category c
+        ON p.product_category_name = c.product_category_name
+)
+
+SELECT * FROM joined
+          )
+        
+        ...
+[0m15:06:40.752951 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.03 seconds
+[0m15:06:40.756971 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+
+    select name, type from system.columns where table = 'silver_dim_products'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:40.810758 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:06:40.817036 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_dim_products"
+[0m15:06:40.825537 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_dim_products`
+        ("product_id", "product_category_name", "product_category_english", "product_name_lenght", "product_description_lenght", "product_photos_qty", "product_weight_g", "product_length_cm", "product_height_cm", "product_width_cm")
+
+-- ============================================================================
+-- Silver Model: silver_dim_products
+-- Deskripsi    : Menggabungkan data produk dengan terjemahan kategori
+--                (Portugis -> Inggris).
+-- ============================================================================
+
+WITH source_product AS (
+    SELECT * FROM `public`.`dim_product`
+),
+
+source_category AS (
+    SELECT * FROM `public`.`dim_product_category`
+),
+
+joined AS (
+    SELECT
+        p.product_id,
+        p.product_category_name,
+        COALESCE(c.product_category_name_english, 'unknown') AS product_category_english,
+        p.product_name_lenght,
+        p.product_description_lenght,
+        p.product_photos_qty,
+        p.product_weight_g,
+        p.product_length_cm,
+        p.product_height_cm,
+        p.product_width_cm
+    FROM source_product p
+    LEFT JOIN source_category c
+        ON p.product_category_name = c.product_category_name
+)
+
+SELECT * FROM joined
+  ...
+[0m15:06:41.032793 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.21 seconds
+[0m15:06:41.035514 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04D41CCE0>]}
+[0m15:06:41.035514 [info ] [Thread-1 (]: 2 of 7 OK created sql table model `public`.`silver_dim_products` ............... [[32mOK[0m in 0.35s]
+[0m15:06:41.039167 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_dim_products
+[0m15:06:41.039167 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_dim_sellers
+[0m15:06:41.039167 [info ] [Thread-1 (]: 3 of 7 START sql table model `public`.`silver_dim_sellers` ..................... [RUN]
+[0m15:06:41.041204 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_dim_products, now model.olist_analytics.silver_dim_sellers)
+[0m15:06:41.041204 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_dim_sellers
+[0m15:06:41.046592 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_dim_sellers"
+[0m15:06:41.049113 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_dim_sellers
+[0m15:06:41.053150 [debug] [Thread-1 (]: Creating new relation silver_dim_sellers
+[0m15:06:41.054837 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+
+            
+
+    
+        create table `public`.`silver_dim_sellers`
+        
+  
+        
+  engine = MergeTree()
+        order by (seller_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+
+-- ============================================================================
+-- Silver Model: silver_dim_sellers
+-- Deskripsi    : Membersihkan data penjual, standarisasi format kota dan state.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_seller`
+),
+
+cleaned AS (
+    SELECT
+        seller_id,
+        seller_zip_code_prefix,
+        TRIM(INITCAP(seller_city)) AS seller_city,
+        UPPER(TRIM(seller_state)) AS seller_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:06:41.085405 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.03 seconds
+[0m15:06:41.091536 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+
+    select name, type from system.columns where table = 'silver_dim_sellers'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:41.143235 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:06:41.147482 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_dim_sellers"
+[0m15:06:41.153768 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_dim_sellers`
+        ("seller_id", "seller_zip_code_prefix", "seller_city", "seller_state")
+
+-- ============================================================================
+-- Silver Model: silver_dim_sellers
+-- Deskripsi    : Membersihkan data penjual, standarisasi format kota dan state.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_seller`
+),
+
+cleaned AS (
+    SELECT
+        seller_id,
+        seller_zip_code_prefix,
+        TRIM(INITCAP(seller_city)) AS seller_city,
+        UPPER(TRIM(seller_state)) AS seller_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+  ...
+[0m15:06:41.232259 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:06:41.235764 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04D651370>]}
+[0m15:06:41.237793 [info ] [Thread-1 (]: 3 of 7 OK created sql table model `public`.`silver_dim_sellers` ................ [[32mOK[0m in 0.19s]
+[0m15:06:41.239959 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_dim_sellers
+[0m15:06:41.241064 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_order_items
+[0m15:06:41.242201 [info ] [Thread-1 (]: 4 of 7 START sql table model `public`.`silver_fact_order_items` ................ [RUN]
+[0m15:06:41.243429 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_dim_sellers, now model.olist_analytics.silver_fact_order_items)
+[0m15:06:41.243986 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_order_items
+[0m15:06:41.251369 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_order_items"
+[0m15:06:41.253395 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_order_items
+[0m15:06:41.259401 [debug] [Thread-1 (]: Creating new relation silver_fact_order_items
+[0m15:06:41.261385 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+
+            
+
+    
+        create table `public`.`silver_fact_order_items`
+        
+  
+        
+  engine = MergeTree()
+        order by ((order_id, order_item_id))
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_order_items
+-- Deskripsi    : Membersihkan data item pesanan, memastikan harga dan
+--                freight bernilai positif.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_item`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        shipping_limit_date,
+        -- Harga: null -> 0, negatif -> 0
+        CASE
+            WHEN price IS NULL OR price < 0 THEN 0
+            ELSE price
+        END AS price,
+        -- Freight: null -> 0, negatif -> 0
+        CASE
+            WHEN freight_value IS NULL OR freight_value < 0 THEN 0
+            ELSE freight_value
+        END AS freight_value
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:06:41.342784 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:06:41.345844 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+
+    select name, type from system.columns where table = 'silver_fact_order_items'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:41.387892 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m15:06:41.399558 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_order_items"
+[0m15:06:41.401606 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_order_items`
+        ("order_id", "order_item_id", "product_id", "seller_id", "shipping_limit_date", "price", "freight_value")
+-- ============================================================================
+-- Silver Model: silver_fact_order_items
+-- Deskripsi    : Membersihkan data item pesanan, memastikan harga dan
+--                freight bernilai positif.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_item`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        shipping_limit_date,
+        -- Harga: null -> 0, negatif -> 0
+        CASE
+            WHEN price IS NULL OR price < 0 THEN 0
+            ELSE price
+        END AS price,
+        -- Freight: null -> 0, negatif -> 0
+        CASE
+            WHEN freight_value IS NULL OR freight_value < 0 THEN 0
+            ELSE freight_value
+        END AS freight_value
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:06:41.867576 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.46 seconds
+[0m15:06:41.871256 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04D6502F0>]}
+[0m15:06:41.871256 [info ] [Thread-1 (]: 4 of 7 OK created sql table model `public`.`silver_fact_order_items` ........... [[32mOK[0m in 0.63s]
+[0m15:06:41.871256 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_order_items
+[0m15:06:41.874337 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_orders
+[0m15:06:41.874337 [info ] [Thread-1 (]: 5 of 7 START sql table model `public`.`silver_fact_orders` ..................... [RUN]
+[0m15:06:41.876371 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_order_items, now model.olist_analytics.silver_fact_orders)
+[0m15:06:41.876900 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_orders
+[0m15:06:41.885413 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_orders"
+[0m15:06:41.889999 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_orders
+[0m15:06:41.896094 [debug] [Thread-1 (]: Creating new relation silver_fact_orders
+[0m15:06:41.898129 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+
+            
+
+    
+        create table `public`.`silver_fact_orders`
+        
+  
+        
+  engine = MergeTree()
+        order by (order_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_orders
+-- Deskripsi    : Membersihkan data pesanan dan menambahkan kolom flag
+--                untuk memudahkan filtering di model selanjutnya.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        customer_id,
+        order_status,
+        order_purchase_timestamp,
+        order_approved_at,
+        order_delivered_carrier_date,
+        order_delivered_customer_date,
+        order_estimated_delivery_date,
+        -- Flag: Apakah pesanan sudah delivered?
+        CASE
+            WHEN order_status = 'delivered' THEN TRUE
+            ELSE FALSE
+        END AS is_delivered,
+        -- Flag: Apakah pesanan dibatalkan?
+        CASE
+            WHEN order_status IN ('canceled', 'unavailable') THEN TRUE
+            ELSE FALSE
+        END AS is_canceled,
+        -- Durasi konfirmasi pesanan (approved - purchase) dalam jam
+        dateDiff('second', toDateTime(order_purchase_timestamp), toDateTime(order_approved_at)) / 3600.0
+            AS approval_hours
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:06:41.948381 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:06:41.953612 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+
+    select name, type from system.columns where table = 'silver_fact_orders'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:41.962961 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:06:41.966562 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_orders"
+[0m15:06:41.971942 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_orders`
+        ("order_id", "customer_id", "order_status", "order_purchase_timestamp", "order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "is_delivered", "is_canceled", "approval_hours")
+-- ============================================================================
+-- Silver Model: silver_fact_orders
+-- Deskripsi    : Membersihkan data pesanan dan menambahkan kolom flag
+--                untuk memudahkan filtering di model selanjutnya.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        customer_id,
+        order_status,
+        order_purchase_timestamp,
+        order_approved_at,
+        order_delivered_carrier_date,
+        order_delivered_customer_date,
+        order_estimated_delivery_date,
+        -- Flag: Apakah pesanan sudah delivered?
+        CASE
+            WHEN order_status = 'delivered' THEN TRUE
+            ELSE FALSE
+        END AS is_delivered,
+        -- Flag: Apakah pesanan dibatalkan?
+        CASE
+            WHEN order_status IN ('canceled', 'unavailable') THEN TRUE
+            ELSE FALSE
+        END AS is_canceled,
+        -- Durasi konfirmasi pesanan (approved - purchase) dalam jam
+        dateDiff('second', toDateTime(order_purchase_timestamp), toDateTime(order_approved_at)) / 3600.0
+            AS approval_hours
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:06:42.886043 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.91 seconds
+[0m15:06:42.897477 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04D4CC770>]}
+[0m15:06:42.897477 [info ] [Thread-1 (]: 5 of 7 OK created sql table model `public`.`silver_fact_orders` ................ [[32mOK[0m in 1.02s]
+[0m15:06:42.897477 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_orders
+[0m15:06:42.897477 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_payments
+[0m15:06:42.897477 [info ] [Thread-1 (]: 6 of 7 START sql table model `public`.`silver_fact_payments` ................... [RUN]
+[0m15:06:42.897477 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_orders, now model.olist_analytics.silver_fact_payments)
+[0m15:06:42.897477 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_payments
+[0m15:06:42.920202 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_payments"
+[0m15:06:42.924240 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_payments
+[0m15:06:42.926249 [debug] [Thread-1 (]: Creating new relation silver_fact_payments
+[0m15:06:42.933201 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+
+            
+
+    
+        create table `public`.`silver_fact_payments`
+        
+  
+        
+  engine = MergeTree()
+        order by ((order_id, payment_sequential))
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_payments
+-- Deskripsi    : Membersihkan data pembayaran per pesanan.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_payment`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        payment_sequential,
+        payment_type,
+        payment_installments,
+        CASE
+            WHEN payment_value IS NULL OR payment_value < 0 THEN 0
+            ELSE payment_value
+        END AS payment_value
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:06:42.954674 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:06:42.969200 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+
+    select name, type from system.columns where table = 'silver_fact_payments'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:43.020991 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:06:43.025013 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_payments"
+[0m15:06:43.027023 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_payments`
+        ("order_id", "payment_sequential", "payment_type", "payment_installments", "payment_value")
+-- ============================================================================
+-- Silver Model: silver_fact_payments
+-- Deskripsi    : Membersihkan data pembayaran per pesanan.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_payment`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        payment_sequential,
+        payment_type,
+        payment_installments,
+        CASE
+            WHEN payment_value IS NULL OR payment_value < 0 THEN 0
+            ELSE payment_value
+        END AS payment_value
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:06:43.369128 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.34 seconds
+[0m15:06:43.373081 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04D5B8AA0>]}
+[0m15:06:43.374201 [info ] [Thread-1 (]: 6 of 7 OK created sql table model `public`.`silver_fact_payments` .............. [[32mOK[0m in 0.48s]
+[0m15:06:43.375789 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_payments
+[0m15:06:43.376347 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_reviews
+[0m15:06:43.377440 [info ] [Thread-1 (]: 7 of 7 START sql table model `public`.`silver_fact_reviews` .................... [RUN]
+[0m15:06:43.378571 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_payments, now model.olist_analytics.silver_fact_reviews)
+[0m15:06:43.379708 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_reviews
+[0m15:06:43.387174 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_reviews"
+[0m15:06:43.390072 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_reviews
+[0m15:06:43.394041 [debug] [Thread-1 (]: Creating new relation silver_fact_reviews
+[0m15:06:43.397047 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+
+            
+
+    
+        create table `public`.`silver_fact_reviews`
+        
+  
+        
+  engine = MergeTree()
+        order by (review_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_reviews
+-- Deskripsi    : Membersihkan data review, menstandarisasi skor review.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_review`
+),
+cleaned AS (
+    SELECT
+        review_id,
+        order_id,
+        -- Skor review: pastikan dalam rentang 1-5
+        CASE
+            WHEN review_score < 1 THEN 1
+            WHEN review_score > 5 THEN 5
+            ELSE review_score
+        END AS review_score,
+        review_comment_title,
+        review_comment_message,
+        review_creation_date,
+        review_answer_timestamp
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:06:43.423640 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.03 seconds
+[0m15:06:43.428269 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+
+    select name, type from system.columns where table = 'silver_fact_reviews'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:06:43.474018 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:06:43.474018 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_reviews"
+[0m15:06:43.481869 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_reviews`
+        ("review_id", "order_id", "review_score", "review_comment_title", "review_comment_message", "review_creation_date", "review_answer_timestamp")
+-- ============================================================================
+-- Silver Model: silver_fact_reviews
+-- Deskripsi    : Membersihkan data review, menstandarisasi skor review.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_review`
+),
+cleaned AS (
+    SELECT
+        review_id,
+        order_id,
+        -- Skor review: pastikan dalam rentang 1-5
+        CASE
+            WHEN review_score < 1 THEN 1
+            WHEN review_score > 5 THEN 5
+            ELSE review_score
+        END AS review_score,
+        review_comment_title,
+        review_comment_message,
+        review_creation_date,
+        review_answer_timestamp
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:06:44.146992 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.67 seconds
+[0m15:06:44.153402 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34e86082-c269-4c22-8e24-722ca17ebdc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04D68A540>]}
+[0m15:06:44.153402 [info ] [Thread-1 (]: 7 of 7 OK created sql table model `public`.`silver_fact_reviews` ............... [[32mOK[0m in 0.77s]
+[0m15:06:44.156404 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_reviews
+[0m15:06:44.158458 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:06:44.158458 [debug] [MainThread]: Connection 'list_' was left open.
+[0m15:06:44.159493 [debug] [MainThread]: On list_: Close
+[0m15:06:44.159493 [debug] [MainThread]: Connection 'list__public' was left open.
+[0m15:06:44.159493 [debug] [MainThread]: On list__public: Close
+[0m15:06:44.159493 [debug] [MainThread]: Connection 'model.olist_analytics.silver_fact_reviews' was left open.
+[0m15:06:44.159493 [debug] [MainThread]: On model.olist_analytics.silver_fact_reviews: Close
+[0m15:06:44.159493 [info ] [MainThread]: 
+[0m15:06:44.163677 [info ] [MainThread]: Finished running 7 table models in 0 hours 0 minutes and 6.78 seconds (6.78s).
+[0m15:06:44.167894 [debug] [MainThread]: Command end result
+[0m15:06:44.222968 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:06:44.230493 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:06:44.244780 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nusacode\pertemuan4\olist_analytics\target\run_results.json
+[0m15:06:44.244780 [info ] [MainThread]: 
+[0m15:06:44.247409 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:06:44.247409 [info ] [MainThread]: 
+[0m15:06:44.247409 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m15:06:44.252877 [debug] [MainThread]: Command `dbt run` succeeded at 15:06:44.252877 after 10.25 seconds
+[0m15:06:44.253944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04A4D34A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A04C9A6C60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A047A70830>]}
+[0m15:06:44.253944 [debug] [MainThread]: Flushing usage events
+[0m15:06:46.804272 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:12:03.964645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F136BBA270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1392EF470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1392EE630>]}
+
+
+============================== 15:12:03.969307 | ab1dc46d-b98a-4688-9679-443623ba2bc2 ==============================
+[0m15:12:03.969307 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:12:03.975888 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\acer\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --select gold', 'use_experimental_parser': 'False', 'log_path': 'C:\\Nusacode\\pertemuan4\\olist_analytics\\logs'}
+[0m15:12:04.398049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13B3CE9C0>]}
+[0m15:12:04.519049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13B307C20>]}
+[0m15:12:04.521072 [info ] [MainThread]: Registered adapter: clickhouse=1.10.1
+[0m15:12:05.196597 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m15:12:05.610582 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m15:12:05.610582 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\gold\gold_dim_sellers.sql
+[0m15:12:05.614459 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\gold\schema.yml
+[0m15:12:05.615062 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\gold\gold_dim_customers.sql
+[0m15:12:05.615062 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\gold\gold_fct_orders.sql
+[0m15:12:05.615062 [debug] [MainThread]: Partial parsing: added file: olist_analytics://models\gold\gold_dim_products.sql
+[0m15:12:06.962311 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_analytics.example
+[0m15:12:06.994045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13B230710>]}
+[0m15:12:07.230336 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:12:07.230915 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:12:07.258846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13BCD5070>]}
+[0m15:12:07.263583 [info ] [MainThread]: Found 11 models, 14 data tests, 8 sources, 530 macros
+[0m15:12:07.263583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13BB486B0>]}
+[0m15:12:07.263583 [info ] [MainThread]: 
+[0m15:12:07.263583 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:12:07.263583 [info ] [MainThread]: 
+[0m15:12:07.263583 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m15:12:07.284478 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m15:12:07.300215 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:12:08.125937 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m15:12:08.181795 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:08.328360 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__public'
+[0m15:12:08.341556 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:12:08.633655 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__public: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "connection_name": "list__public"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'public'
+      group by name, schema, type, db_engine
+
+  ...
+[0m15:12:08.909692 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.28 seconds
+[0m15:12:08.932632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13BB48D70>]}
+[0m15:12:08.933151 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_dim_customers
+[0m15:12:08.933151 [info ] [Thread-1 (]: 1 of 4 START sql table model `public`.`gold_dim_customers` ..................... [RUN]
+[0m15:12:08.948092 [debug] [Thread-1 (]: Acquiring new clickhouse connection 'model.olist_analytics.gold_dim_customers'
+[0m15:12:08.949097 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_dim_customers
+[0m15:12:08.967590 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_dim_customers"
+[0m15:12:08.970477 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_dim_customers
+[0m15:12:09.069896 [debug] [Thread-1 (]: Creating new relation gold_dim_customers
+[0m15:12:09.158669 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:12:09.412090 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+
+            
+
+    
+        create table `public`.`gold_dim_customers`
+        
+  
+        
+  engine = MergeTree()
+        order by (customer_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_dim_customers
+-- Deskripsi    : Dimension table untuk data pelanggan. Berisi informasi
+--                demografis dan metrik performa tiap customer.
+--                Grain: satu baris per pelanggan (customer_id).
+-- ============================================================================
+WITH customers AS (
+    SELECT * FROM `public`.`silver_dim_customers`
+),
+orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id,
+        SUM(payment_value) AS total_payment,
+        COUNT(DISTINCT payment_type) AS payment_method_count,
+        groupArray(DISTINCT payment_type) AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id,
+        AVG(review_score) AS avg_review_score,
+        COUNT(review_id) AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+order_details AS (
+    SELECT
+        o.order_id,
+        o.customer_id,
+        o.is_delivered,
+        o.is_canceled,
+        o.order_purchase_timestamp,
+        COALESCE(p.total_payment, 0) AS total_payment,
+        COALESCE(r.avg_review_score, 0) AS avg_review_score
+    FROM orders o
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r ON o.order_id = r.order_id
+),
+customer_summary AS (
+    SELECT
+        c.customer_id,
+        c.customer_unique_id,
+        c.customer_city,
+        c.customer_state,
+        COUNT(DISTINCT o.order_id) AS total_orders,
+        countDistinctIf(o.order_id, o.is_delivered) AS delivered_orders,
+        countDistinctIf(o.order_id, o.is_canceled) AS canceled_orders,
+        SUM(o.total_payment) AS total_revenue,
+        AVG(o.avg_review_score) AS avg_review_score,
+        MIN(o.order_purchase_timestamp) AS first_order_date,
+        MAX(o.order_purchase_timestamp) AS last_order_date
+    FROM customers c
+    LEFT JOIN order_details o ON c.customer_id = o.customer_id
+    GROUP BY
+        c.customer_id, c.customer_unique_id,
+        c.customer_city, c.customer_state
+)
+SELECT
+    customer_id,
+    customer_unique_id,
+    customer_city,
+    customer_state,
+    total_orders,
+    delivered_orders,
+    canceled_orders,
+    CASE
+        WHEN total_orders > 0
+        THEN ROUND(delivered_orders / total_orders, 2)
+        ELSE 0
+    END AS delivery_rate,
+    total_revenue,
+    avg_review_score,
+    first_order_date,
+    last_order_date,
+    CASE
+        WHEN first_order_date IS NOT NULL AND last_order_date IS NOT NULL
+        THEN dateDiff('day', toDateTime(first_order_date), toDateTime(last_order_date))
+        ELSE 0
+    END AS customer_tenure_days
+FROM customer_summary
+          )
+        
+        ...
+[0m15:12:09.548362 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.13 seconds
+[0m15:12:09.581680 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+
+    select name, type from system.columns where table = 'gold_dim_customers'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:09.598488 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:09.598488 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_dim_customers"
+[0m15:12:09.611676 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_dim_customers`
+        ("customer_id", "customer_unique_id", "customer_city", "customer_state", "total_orders", "delivered_orders", "canceled_orders", "delivery_rate", "total_revenue", "avg_review_score", "first_order_date", "last_order_date", "customer_tenure_days")
+-- ============================================================================
+-- Gold Model: gold_dim_customers
+-- Deskripsi    : Dimension table untuk data pelanggan. Berisi informasi
+--                demografis dan metrik performa tiap customer.
+--                Grain: satu baris per pelanggan (customer_id).
+-- ============================================================================
+WITH customers AS (
+    SELECT * FROM `public`.`silver_dim_customers`
+),
+orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id,
+        SUM(payment_value) AS total_payment,
+        COUNT(DISTINCT payment_type) AS payment_method_count,
+        groupArray(DISTINCT payment_type) AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id,
+        AVG(review_score) AS avg_review_score,
+        COUNT(review_id) AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+order_details AS (
+    SELECT
+        o.order_id,
+        o.customer_id,
+        o.is_delivered,
+        o.is_canceled,
+        o.order_purchase_timestamp,
+        COALESCE(p.total_payment, 0) AS total_payment,
+        COALESCE(r.avg_review_score, 0) AS avg_review_score
+    FROM orders o
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r ON o.order_id = r.order_id
+),
+customer_summary AS (
+    SELECT
+        c.customer_id,
+        c.customer_unique_id,
+        c.customer_city,
+        c.customer_state,
+        COUNT(DISTINCT o.order_id) AS total_orders,
+        countDistinctIf(o.order_id, o.is_delivered) AS delivered_orders,
+        countDistinctIf(o.order_id, o.is_canceled) AS canceled_orders,
+        SUM(o.total_payment) AS total_revenue,
+        AVG(o.avg_review_score) AS avg_review_score,
+        MIN(o.order_purchase_timestamp) AS first_order_date,
+        MAX(o.order_purchase_timestamp) AS last_order_date
+    FROM customers c
+    LEFT JOIN order_details o ON c.customer_id = o.customer_id
+    GROUP BY
+        c.customer_id, c.customer_unique_id,
+        c.customer_city, c.customer_state
+)
+SELECT
+    customer_id,
+    customer_unique_id,
+    customer_city,
+    customer_state,
+    total_orders,
+    delivered_orders,
+    canceled_orders,
+    CASE
+        WHEN total_orders > 0
+        THEN ROUND(delivered_orders / total_orders, 2)
+        ELSE 0
+    END AS delivery_rate,
+    total_revenue,
+    avg_review_score,
+    first_order_date,
+    last_order_date,
+    CASE
+        WHEN first_order_date IS NOT NULL AND last_order_date IS NOT NULL
+        THEN dateDiff('day', toDateTime(first_order_date), toDateTime(last_order_date))
+        ELSE 0
+    END AS customer_tenure_days
+FROM customer_summary
+  ...
+[0m15:12:12.358793 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 2.75 seconds
+[0m15:12:12.405626 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F136CA68D0>]}
+[0m15:12:12.408342 [info ] [Thread-1 (]: 1 of 4 OK created sql table model `public`.`gold_dim_customers` ................ [[32mOK[0m in 3.47s]
+[0m15:12:12.409485 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_dim_customers
+[0m15:12:12.410031 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_dim_products
+[0m15:12:12.411134 [info ] [Thread-1 (]: 2 of 4 START sql table model `public`.`gold_dim_products` ...................... [RUN]
+[0m15:12:12.412257 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.gold_dim_customers, now model.olist_analytics.gold_dim_products)
+[0m15:12:12.413361 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_dim_products
+[0m15:12:12.427813 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_dim_products"
+[0m15:12:12.434186 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_dim_products
+[0m15:12:12.451147 [debug] [Thread-1 (]: Creating new relation gold_dim_products
+[0m15:12:12.458314 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+
+            
+
+    
+        create table `public`.`gold_dim_products`
+        
+  
+        
+  engine = MergeTree()
+        order by (product_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_dim_products
+-- Deskripsi    : Dimension table untuk data produk. Menggabungkan produk
+--                dengan kategori Bahasa Inggris.
+--                Grain: satu baris per produk (product_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_products`
+),
+order_items AS (
+    SELECT
+        product_id,
+        COUNT(DISTINCT order_id)   AS total_orders,
+        SUM(price)                 AS total_revenue,
+        SUM(freight_value)         AS total_freight,
+        COUNT(DISTINCT seller_id)  AS total_sellers
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY product_id
+),
+final AS (
+    SELECT
+        p.product_id                        AS product_id,
+        p.product_category_name             AS product_category_name,
+        p.product_category_english          AS product_category_english,
+        p.product_weight_g                  AS product_weight_g,
+        p.product_length_cm                 AS product_length_cm,
+        p.product_height_cm                 AS product_height_cm,
+        p.product_width_cm                  AS product_width_cm,
+        COALESCE(oi.total_orders, 0)        AS total_orders,
+        COALESCE(oi.total_revenue, 0)       AS total_revenue,
+        COALESCE(oi.total_freight, 0)       AS total_freight,
+        COALESCE(oi.total_sellers, 0)       AS total_sellers
+    FROM source p
+    LEFT JOIN order_items oi ON p.product_id = oi.product_id
+)
+SELECT
+    product_id,
+    product_category_name,
+    product_category_english,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm,
+    product_width_cm,
+    total_orders,
+    total_revenue,
+    total_freight,
+    total_sellers
+FROM final
+          )
+        
+        ...
+[0m15:12:12.521177 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m15:12:12.530963 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+
+    select name, type from system.columns where table = 'gold_dim_products'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:12.541706 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:12.543309 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_dim_products"
+[0m15:12:12.547277 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_dim_products`
+        ("product_id", "product_category_name", "product_category_english", "product_weight_g", "product_length_cm", "product_height_cm", "product_width_cm", "total_orders", "total_revenue", "total_freight", "total_sellers")
+-- ============================================================================
+-- Gold Model: gold_dim_products
+-- Deskripsi    : Dimension table untuk data produk. Menggabungkan produk
+--                dengan kategori Bahasa Inggris.
+--                Grain: satu baris per produk (product_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_products`
+),
+order_items AS (
+    SELECT
+        product_id,
+        COUNT(DISTINCT order_id)   AS total_orders,
+        SUM(price)                 AS total_revenue,
+        SUM(freight_value)         AS total_freight,
+        COUNT(DISTINCT seller_id)  AS total_sellers
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY product_id
+),
+final AS (
+    SELECT
+        p.product_id                        AS product_id,
+        p.product_category_name             AS product_category_name,
+        p.product_category_english          AS product_category_english,
+        p.product_weight_g                  AS product_weight_g,
+        p.product_length_cm                 AS product_length_cm,
+        p.product_height_cm                 AS product_height_cm,
+        p.product_width_cm                  AS product_width_cm,
+        COALESCE(oi.total_orders, 0)        AS total_orders,
+        COALESCE(oi.total_revenue, 0)       AS total_revenue,
+        COALESCE(oi.total_freight, 0)       AS total_freight,
+        COALESCE(oi.total_sellers, 0)       AS total_sellers
+    FROM source p
+    LEFT JOIN order_items oi ON p.product_id = oi.product_id
+)
+SELECT
+    product_id,
+    product_category_name,
+    product_category_english,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm,
+    product_width_cm,
+    total_orders,
+    total_revenue,
+    total_freight,
+    total_sellers
+FROM final
+  ...
+[0m15:12:13.162850 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.61 seconds
+[0m15:12:13.168006 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13C63B950>]}
+[0m15:12:13.168006 [info ] [Thread-1 (]: 2 of 4 OK created sql table model `public`.`gold_dim_products` ................. [[32mOK[0m in 0.76s]
+[0m15:12:13.170470 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_dim_products
+[0m15:12:13.170470 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_dim_sellers
+[0m15:12:13.170470 [info ] [Thread-1 (]: 3 of 4 START sql table model `public`.`gold_dim_sellers` ....................... [RUN]
+[0m15:12:13.170470 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.gold_dim_products, now model.olist_analytics.gold_dim_sellers)
+[0m15:12:13.170470 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_dim_sellers
+[0m15:12:13.187156 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_dim_sellers"
+[0m15:12:13.191330 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_dim_sellers
+[0m15:12:13.197618 [debug] [Thread-1 (]: Creating new relation gold_dim_sellers
+[0m15:12:13.202630 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+
+            
+
+    
+        create table `public`.`gold_dim_sellers`
+        
+  
+        
+  engine = MergeTree()
+        order by (seller_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_dim_sellers
+-- Deskripsi    : Dimension table untuk data penjual. Berisi informasi
+--                demografis dan metrik performa tiap seller.
+--                Grain: satu baris per penjual (seller_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_sellers`
+),
+order_items AS (
+    SELECT
+        seller_id,
+        COUNT(DISTINCT order_id) AS total_orders,
+        SUM(price)               AS total_revenue,
+        SUM(freight_value)       AS total_freight,
+        COUNT(DISTINCT product_id) AS unique_products
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY seller_id
+),
+reviews AS (
+    SELECT
+        oi.seller_id                      AS seller_id,
+        ROUND(AVG(r.review_score), 2)     AS avg_customer_review,
+        COUNT(r.review_id)                AS total_reviews
+    FROM `public`.`silver_fact_reviews` r
+    JOIN `public`.`silver_fact_order_items` oi
+        ON r.order_id = oi.order_id
+    GROUP BY oi.seller_id
+),
+final AS (
+    SELECT
+        s.seller_id                              AS seller_id,
+        s.seller_city                            AS seller_city,
+        s.seller_state                           AS seller_state,
+        COALESCE(oi.total_orders, 0)             AS total_orders,
+        COALESCE(oi.total_revenue, 0)            AS total_revenue,
+        COALESCE(oi.total_freight, 0)            AS total_freight,
+        COALESCE(oi.unique_products, 0)          AS unique_products,
+        COALESCE(r.avg_customer_review, 0)       AS avg_customer_review,
+        COALESCE(r.total_reviews, 0)             AS total_reviews
+    FROM source s
+    LEFT JOIN order_items oi ON s.seller_id = oi.seller_id
+    LEFT JOIN reviews r      ON s.seller_id = r.seller_id
+)
+SELECT
+    seller_id,
+    seller_city,
+    seller_state,
+    total_orders,
+    total_revenue,
+    total_freight,
+    unique_products,
+    avg_customer_review,
+    total_reviews
+FROM final
+          )
+        
+        ...
+[0m15:12:13.231293 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.03 seconds
+[0m15:12:13.238205 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+
+    select name, type from system.columns where table = 'gold_dim_sellers'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:13.296325 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m15:12:13.302202 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_dim_sellers"
+[0m15:12:13.302202 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_dim_sellers`
+        ("seller_id", "seller_city", "seller_state", "total_orders", "total_revenue", "total_freight", "unique_products", "avg_customer_review", "total_reviews")
+-- ============================================================================
+-- Gold Model: gold_dim_sellers
+-- Deskripsi    : Dimension table untuk data penjual. Berisi informasi
+--                demografis dan metrik performa tiap seller.
+--                Grain: satu baris per penjual (seller_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_sellers`
+),
+order_items AS (
+    SELECT
+        seller_id,
+        COUNT(DISTINCT order_id) AS total_orders,
+        SUM(price)               AS total_revenue,
+        SUM(freight_value)       AS total_freight,
+        COUNT(DISTINCT product_id) AS unique_products
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY seller_id
+),
+reviews AS (
+    SELECT
+        oi.seller_id                      AS seller_id,
+        ROUND(AVG(r.review_score), 2)     AS avg_customer_review,
+        COUNT(r.review_id)                AS total_reviews
+    FROM `public`.`silver_fact_reviews` r
+    JOIN `public`.`silver_fact_order_items` oi
+        ON r.order_id = oi.order_id
+    GROUP BY oi.seller_id
+),
+final AS (
+    SELECT
+        s.seller_id                              AS seller_id,
+        s.seller_city                            AS seller_city,
+        s.seller_state                           AS seller_state,
+        COALESCE(oi.total_orders, 0)             AS total_orders,
+        COALESCE(oi.total_revenue, 0)            AS total_revenue,
+        COALESCE(oi.total_freight, 0)            AS total_freight,
+        COALESCE(oi.unique_products, 0)          AS unique_products,
+        COALESCE(r.avg_customer_review, 0)       AS avg_customer_review,
+        COALESCE(r.total_reviews, 0)             AS total_reviews
+    FROM source s
+    LEFT JOIN order_items oi ON s.seller_id = oi.seller_id
+    LEFT JOIN reviews r      ON s.seller_id = r.seller_id
+)
+SELECT
+    seller_id,
+    seller_city,
+    seller_state,
+    total_orders,
+    total_revenue,
+    total_freight,
+    unique_products,
+    avg_customer_review,
+    total_reviews
+FROM final
+  ...
+[0m15:12:14.016529 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.71 seconds
+[0m15:12:14.029047 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13C48E810>]}
+[0m15:12:14.031680 [info ] [Thread-1 (]: 3 of 4 OK created sql table model `public`.`gold_dim_sellers` .................. [[32mOK[0m in 0.86s]
+[0m15:12:14.035674 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_dim_sellers
+[0m15:12:14.035674 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_fct_orders
+[0m15:12:14.039848 [info ] [Thread-1 (]: 4 of 4 START sql incremental model `public`.`gold_fct_orders` .................. [RUN]
+[0m15:12:14.040876 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.gold_dim_sellers, now model.olist_analytics.gold_fct_orders)
+[0m15:12:14.043979 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_fct_orders
+[0m15:12:14.055077 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_fct_orders"
+[0m15:12:14.055077 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_fct_orders
+[0m15:12:14.148398 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+            
+
+    
+        create table `public`.`gold_fct_orders`
+        
+  
+        
+  engine = ReplacingMergeTree()
+        order by (order_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_fct_orders
+-- Deskripsi    : Fact table untuk data pesanan. Menggabungkan order dengan
+--                item, payment, dan review untuk analitik end-to-end.
+--                Grain: satu baris per order (order_id).
+-- ============================================================================
+WITH orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id                              AS order_id,
+        SUM(payment_value)                    AS total_payment,
+        COUNT(DISTINCT payment_type)          AS payment_method_count,
+        groupArrayDistinct(payment_type)      AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id                              AS order_id,
+        AVG(review_score)                     AS avg_review_score,
+        COUNT(review_id)                      AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+joined AS (
+    SELECT
+        o.order_id                                          AS order_id,
+        o.customer_id                                       AS customer_id,
+        o.order_status                                      AS order_status,
+        o.is_delivered                                      AS is_delivered,
+        o.is_canceled                                       AS is_canceled,
+        o.order_purchase_timestamp                          AS order_purchase_timestamp,
+        o.order_approved_at                                 AS order_approved_at,
+        o.order_delivered_customer_date                     AS order_delivered_customer_date,
+        o.approval_hours                                    AS approval_hours,
+        COUNT(DISTINCT i.order_item_id)                     AS item_count,
+        SUM(i.price)                                        AS total_price,
+        SUM(i.freight_value)                                AS total_freight,
+        SUM(i.price + i.freight_value)                      AS total_order_value,
+        COUNT(DISTINCT i.product_id)                        AS unique_products,
+        COUNT(DISTINCT i.seller_id)                         AS unique_sellers,
+        COALESCE(p.total_payment, 0)                        AS total_payment,
+        COALESCE(p.payment_method_count, 0)                 AS payment_method_count,
+        p.payment_types                                     AS payment_types,
+        COALESCE(r.avg_review_score, 0)                     AS avg_review_score,
+        COALESCE(r.review_count, 0)                         AS review_count
+    FROM orders o
+    LEFT JOIN items i    ON o.order_id = i.order_id
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r  ON o.order_id = r.order_id
+    GROUP BY
+        o.order_id, o.customer_id, o.order_status,
+        o.is_delivered, o.is_canceled,
+        o.order_purchase_timestamp, o.order_approved_at,
+        o.order_delivered_customer_date, o.approval_hours,
+        p.total_payment, p.payment_method_count, p.payment_types,
+        r.avg_review_score, r.review_count
+)
+SELECT
+    order_id,
+    customer_id,
+    order_status,
+    is_delivered,
+    is_canceled,
+    order_purchase_timestamp,
+    order_approved_at,
+    order_delivered_customer_date,
+    approval_hours,
+    item_count,
+    total_price,
+    total_freight,
+    total_order_value,
+    unique_products,
+    unique_sellers,
+    total_payment,
+    payment_method_count,
+    payment_types,
+    avg_review_score,
+    review_count
+FROM joined
+WHERE is_canceled = 0
+          )
+        
+        ...
+[0m15:12:14.226805 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:12:14.230902 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+    select name, type from system.columns where table = 'gold_fct_orders'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:14.242724 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:14.250950 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_fct_orders"
+[0m15:12:14.258628 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+        
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_fct_orders`
+        ("order_id", "customer_id", "order_status", "is_delivered", "is_canceled", "order_purchase_timestamp", "order_approved_at", "order_delivered_customer_date", "approval_hours", "item_count", "total_price", "total_freight", "total_order_value", "unique_products", "unique_sellers", "total_payment", "payment_method_count", "payment_types", "avg_review_score", "review_count")
+-- ============================================================================
+-- Gold Model: gold_fct_orders
+-- Deskripsi    : Fact table untuk data pesanan. Menggabungkan order dengan
+--                item, payment, dan review untuk analitik end-to-end.
+--                Grain: satu baris per order (order_id).
+-- ============================================================================
+WITH orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id                              AS order_id,
+        SUM(payment_value)                    AS total_payment,
+        COUNT(DISTINCT payment_type)          AS payment_method_count,
+        groupArrayDistinct(payment_type)      AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id                              AS order_id,
+        AVG(review_score)                     AS avg_review_score,
+        COUNT(review_id)                      AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+joined AS (
+    SELECT
+        o.order_id                                          AS order_id,
+        o.customer_id                                       AS customer_id,
+        o.order_status                                      AS order_status,
+        o.is_delivered                                      AS is_delivered,
+        o.is_canceled                                       AS is_canceled,
+        o.order_purchase_timestamp                          AS order_purchase_timestamp,
+        o.order_approved_at                                 AS order_approved_at,
+        o.order_delivered_customer_date                     AS order_delivered_customer_date,
+        o.approval_hours                                    AS approval_hours,
+        COUNT(DISTINCT i.order_item_id)                     AS item_count,
+        SUM(i.price)                                        AS total_price,
+        SUM(i.freight_value)                                AS total_freight,
+        SUM(i.price + i.freight_value)                      AS total_order_value,
+        COUNT(DISTINCT i.product_id)                        AS unique_products,
+        COUNT(DISTINCT i.seller_id)                         AS unique_sellers,
+        COALESCE(p.total_payment, 0)                        AS total_payment,
+        COALESCE(p.payment_method_count, 0)                 AS payment_method_count,
+        p.payment_types                                     AS payment_types,
+        COALESCE(r.avg_review_score, 0)                     AS avg_review_score,
+        COALESCE(r.review_count, 0)                         AS review_count
+    FROM orders o
+    LEFT JOIN items i    ON o.order_id = i.order_id
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r  ON o.order_id = r.order_id
+    GROUP BY
+        o.order_id, o.customer_id, o.order_status,
+        o.is_delivered, o.is_canceled,
+        o.order_purchase_timestamp, o.order_approved_at,
+        o.order_delivered_customer_date, o.approval_hours,
+        p.total_payment, p.payment_method_count, p.payment_types,
+        r.avg_review_score, r.review_count
+)
+SELECT
+    order_id,
+    customer_id,
+    order_status,
+    is_delivered,
+    is_canceled,
+    order_purchase_timestamp,
+    order_approved_at,
+    order_delivered_customer_date,
+    approval_hours,
+    item_count,
+    total_price,
+    total_freight,
+    total_order_value,
+    unique_products,
+    unique_sellers,
+    total_payment,
+    payment_method_count,
+    payment_types,
+    avg_review_score,
+    review_count
+FROM joined
+WHERE is_canceled = 0
+  
+    ...
+[0m15:12:16.174027 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 1.92 seconds
+[0m15:12:16.184187 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ab1dc46d-b98a-4688-9679-443623ba2bc2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13C7063C0>]}
+[0m15:12:16.188117 [info ] [Thread-1 (]: 4 of 4 OK created sql incremental model `public`.`gold_fct_orders` ............. [[32mOK[0m in 2.14s]
+[0m15:12:16.188117 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_fct_orders
+[0m15:12:16.191159 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:12:16.192196 [debug] [MainThread]: Connection 'list_' was left open.
+[0m15:12:16.192196 [debug] [MainThread]: On list_: Close
+[0m15:12:16.192196 [debug] [MainThread]: Connection 'list__public' was left open.
+[0m15:12:16.192196 [debug] [MainThread]: On list__public: Close
+[0m15:12:16.192196 [debug] [MainThread]: Connection 'model.olist_analytics.gold_fct_orders' was left open.
+[0m15:12:16.192196 [debug] [MainThread]: On model.olist_analytics.gold_fct_orders: Close
+[0m15:12:16.192196 [info ] [MainThread]: 
+[0m15:12:16.197243 [info ] [MainThread]: Finished running 1 incremental model, 3 table models in 0 hours 0 minutes and 8.93 seconds (8.93s).
+[0m15:12:16.199360 [debug] [MainThread]: Command end result
+[0m15:12:16.270902 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:12:16.283697 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:12:16.293502 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nusacode\pertemuan4\olist_analytics\target\run_results.json
+[0m15:12:16.294290 [info ] [MainThread]: 
+[0m15:12:16.295795 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:12:16.296698 [info ] [MainThread]: 
+[0m15:12:16.297376 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m15:12:16.298159 [debug] [MainThread]: Command `dbt run` succeeded at 15:12:16.298159 after 12.67 seconds
+[0m15:12:16.298159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F1397D1E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F13993B830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F136DD0F20>]}
+[0m15:12:16.298159 [debug] [MainThread]: Flushing usage events
+[0m15:12:18.575649 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:12:33.052426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF44257C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF41230F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF4119A8D0>]}
+
+
+============================== 15:12:33.052426 | 4002095f-b9aa-4758-8284-bedbbce91da1 ==============================
+[0m15:12:33.052426 [info ] [MainThread]: Running with dbt=1.11.12
+[0m15:12:33.061703 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\acer\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Nusacode\\pertemuan4\\olist_analytics\\logs'}
+[0m15:12:33.716714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF45D13D70>]}
+[0m15:12:33.971197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF45A76F60>]}
+[0m15:12:33.972220 [info ] [MainThread]: Registered adapter: clickhouse=1.10.1
+[0m15:12:35.004914 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m15:12:35.613905 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:12:35.613905 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:12:35.613905 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:12:35.630343 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_analytics.example
+[0m15:12:35.813755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF45ED6840>]}
+[0m15:12:36.264355 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:12:36.282636 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:12:36.368487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF462FAC90>]}
+[0m15:12:36.370512 [info ] [MainThread]: Found 11 models, 14 data tests, 8 sources, 530 macros
+[0m15:12:36.373892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF435D3410>]}
+[0m15:12:36.382936 [info ] [MainThread]: 
+[0m15:12:36.382936 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:12:36.382936 [info ] [MainThread]: 
+[0m15:12:36.389762 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m15:12:36.422634 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m15:12:36.462973 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:12:37.280996 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m15:12:37.330514 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:37.669832 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__public'
+[0m15:12:37.693916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:12:37.973633 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__public: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "connection_name": "list__public"} */
+with mv_sources as (
+      -- Find all MVs and their target tables (database and name of the MV, plus the SELECT SQL)
+      select
+        name as mv_name,
+        database as mv_database,
+        any(as_select) as mv_sql,
+        any(replaceRegexpOne(create_table_query, '.*TO\\s+`?([^`\\s(]+)`?\\.`?([^`\\s(]+)`?.*', '\\1.\\2')) as target_fqn
+      
+      from system.tables
+      
+      where engine = 'MaterializedView'
+        and create_table_query like '%TO %'
+      group by mv_name, mv_database
+    )
+    select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        t.engine = 'MaterializedView', 'materialized_view',
+        t.engine = 'View', 'view',
+        t.engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,
+      groupArrayIf(
+        map('schema', mv_sources.mv_database, 'name', mv_sources.mv_name, 'sql', mv_sources.mv_sql),
+        mv_sources.mv_name != ''
+      ) as mvs_pointing_to_it,0 as is_on_cluster
+        from system.tables as t
+      
+        join system.databases as db on t.database = db.name
+        left join mv_sources on mv_sources.target_fqn = concat(t.database, '.', t.name)
+      where schema = 'public'
+      group by name, schema, type, db_engine
+
+  ...
+[0m15:12:38.092518 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.12 seconds
+[0m15:12:38.097103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF45D39970>]}
+[0m15:12:38.116406 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_dim_customers
+[0m15:12:38.118430 [info ] [Thread-1 (]: 1 of 11 START sql table model `public`.`silver_dim_customers` .................. [RUN]
+[0m15:12:38.118430 [debug] [Thread-1 (]: Acquiring new clickhouse connection 'model.olist_analytics.silver_dim_customers'
+[0m15:12:38.118430 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_dim_customers
+[0m15:12:38.147683 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_dim_customers"
+[0m15:12:38.150881 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_dim_customers
+[0m15:12:38.441764 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:12:38.687742 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+
+            
+
+    
+        create table `public`.`silver_dim_customers__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (customer_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+
+-- ============================================================================
+-- Silver Model: silver_dim_customers
+-- Deskripsi    : Membersihkan dan menstandarisasi data pelanggan dari
+--                raw_schema.dim_customer.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_customer`
+),
+
+cleaned AS (
+    SELECT
+        customer_id,
+        customer_unique_id,
+        customer_zip_code_prefix,
+        -- Trim whitespace dan standarisasi format kota
+        TRIM(INITCAP(customer_city)) AS customer_city,
+        -- Standarisasi state ke uppercase
+        UPPER(TRIM(customer_state)) AS customer_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:12:38.766012 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:12:38.855518 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+
+    select name, type from system.columns where table = 'silver_dim_customers__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:38.906598 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:38.921906 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_dim_customers"
+[0m15:12:38.929688 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_dim_customers__dbt_backup`
+        ("customer_id", "customer_unique_id", "customer_zip_code_prefix", "customer_city", "customer_state")
+
+-- ============================================================================
+-- Silver Model: silver_dim_customers
+-- Deskripsi    : Membersihkan dan menstandarisasi data pelanggan dari
+--                raw_schema.dim_customer.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_customer`
+),
+
+cleaned AS (
+    SELECT
+        customer_id,
+        customer_unique_id,
+        customer_zip_code_prefix,
+        -- Trim whitespace dan standarisasi format kota
+        TRIM(INITCAP(customer_city)) AS customer_city,
+        -- Standarisasi state ke uppercase
+        UPPER(TRIM(customer_state)) AS customer_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+  ...
+[0m15:12:39.377799 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.44 seconds
+[0m15:12:39.408080 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+EXCHANGE TABLES `public`.`silver_dim_customers__dbt_backup` AND `public`.`silver_dim_customers` 
+  
+  ...
+[0m15:12:39.423186 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:39.510621 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_customers"} */
+drop table if exists `public`.`silver_dim_customers__dbt_backup` 
+  ...
+[0m15:12:39.556847 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m15:12:39.565576 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF414FA0C0>]}
+[0m15:12:39.567597 [info ] [Thread-1 (]: 1 of 11 OK created sql table model `public`.`silver_dim_customers` ............. [[32mOK[0m in 1.45s]
+[0m15:12:39.567597 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_dim_customers
+[0m15:12:39.567597 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_dim_products
+[0m15:12:39.567597 [info ] [Thread-1 (]: 2 of 11 START sql table model `public`.`silver_dim_products` ................... [RUN]
+[0m15:12:39.574198 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_dim_customers, now model.olist_analytics.silver_dim_products)
+[0m15:12:39.576216 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_dim_products
+[0m15:12:39.589816 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_dim_products"
+[0m15:12:39.589816 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_dim_products
+[0m15:12:39.602258 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+
+            
+
+    
+        create table `public`.`silver_dim_products__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (product_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+
+-- ============================================================================
+-- Silver Model: silver_dim_products
+-- Deskripsi    : Menggabungkan data produk dengan terjemahan kategori
+--                (Portugis -> Inggris).
+-- ============================================================================
+
+WITH source_product AS (
+    SELECT * FROM `public`.`dim_product`
+),
+
+source_category AS (
+    SELECT * FROM `public`.`dim_product_category`
+),
+
+joined AS (
+    SELECT
+        p.product_id,
+        p.product_category_name,
+        COALESCE(c.product_category_name_english, 'unknown') AS product_category_english,
+        p.product_name_lenght,
+        p.product_description_lenght,
+        p.product_photos_qty,
+        p.product_weight_g,
+        p.product_length_cm,
+        p.product_height_cm,
+        p.product_width_cm
+    FROM source_product p
+    LEFT JOIN source_category c
+        ON p.product_category_name = c.product_category_name
+)
+
+SELECT * FROM joined
+          )
+        
+        ...
+[0m15:12:39.706970 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.10 seconds
+[0m15:12:39.720964 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+
+    select name, type from system.columns where table = 'silver_dim_products__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:39.743518 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:39.759551 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_dim_products"
+[0m15:12:39.767084 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_dim_products__dbt_backup`
+        ("product_id", "product_category_name", "product_category_english", "product_name_lenght", "product_description_lenght", "product_photos_qty", "product_weight_g", "product_length_cm", "product_height_cm", "product_width_cm")
+
+-- ============================================================================
+-- Silver Model: silver_dim_products
+-- Deskripsi    : Menggabungkan data produk dengan terjemahan kategori
+--                (Portugis -> Inggris).
+-- ============================================================================
+
+WITH source_product AS (
+    SELECT * FROM `public`.`dim_product`
+),
+
+source_category AS (
+    SELECT * FROM `public`.`dim_product_category`
+),
+
+joined AS (
+    SELECT
+        p.product_id,
+        p.product_category_name,
+        COALESCE(c.product_category_name_english, 'unknown') AS product_category_english,
+        p.product_name_lenght,
+        p.product_description_lenght,
+        p.product_photos_qty,
+        p.product_weight_g,
+        p.product_length_cm,
+        p.product_height_cm,
+        p.product_width_cm
+    FROM source_product p
+    LEFT JOIN source_category c
+        ON p.product_category_name = c.product_category_name
+)
+
+SELECT * FROM joined
+  ...
+[0m15:12:40.107858 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.34 seconds
+[0m15:12:40.110172 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+EXCHANGE TABLES `public`.`silver_dim_products__dbt_backup` AND `public`.`silver_dim_products` 
+  
+  ...
+[0m15:12:40.121835 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:40.130007 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_products"} */
+drop table if exists `public`.`silver_dim_products__dbt_backup` 
+  ...
+[0m15:12:40.181432 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:40.191826 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46AA8DA0>]}
+[0m15:12:40.193849 [info ] [Thread-1 (]: 2 of 11 OK created sql table model `public`.`silver_dim_products` .............. [[32mOK[0m in 0.62s]
+[0m15:12:40.196882 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_dim_products
+[0m15:12:40.200591 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_dim_sellers
+[0m15:12:40.203012 [info ] [Thread-1 (]: 3 of 11 START sql table model `public`.`silver_dim_sellers` .................... [RUN]
+[0m15:12:40.206796 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_dim_products, now model.olist_analytics.silver_dim_sellers)
+[0m15:12:40.207354 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_dim_sellers
+[0m15:12:40.222506 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_dim_sellers"
+[0m15:12:40.222506 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_dim_sellers
+[0m15:12:40.258402 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+
+            
+
+    
+        create table `public`.`silver_dim_sellers__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (seller_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+
+-- ============================================================================
+-- Silver Model: silver_dim_sellers
+-- Deskripsi    : Membersihkan data penjual, standarisasi format kota dan state.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_seller`
+),
+
+cleaned AS (
+    SELECT
+        seller_id,
+        seller_zip_code_prefix,
+        TRIM(INITCAP(seller_city)) AS seller_city,
+        UPPER(TRIM(seller_state)) AS seller_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:12:40.365852 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.11 seconds
+[0m15:12:40.377932 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+
+    select name, type from system.columns where table = 'silver_dim_sellers__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:40.404911 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:40.419170 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_dim_sellers"
+[0m15:12:40.426981 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_dim_sellers__dbt_backup`
+        ("seller_id", "seller_zip_code_prefix", "seller_city", "seller_state")
+
+-- ============================================================================
+-- Silver Model: silver_dim_sellers
+-- Deskripsi    : Membersihkan data penjual, standarisasi format kota dan state.
+-- ============================================================================
+
+WITH source AS (
+    SELECT * FROM `public`.`dim_seller`
+),
+
+cleaned AS (
+    SELECT
+        seller_id,
+        seller_zip_code_prefix,
+        TRIM(INITCAP(seller_city)) AS seller_city,
+        UPPER(TRIM(seller_state)) AS seller_state
+    FROM source
+)
+
+SELECT * FROM cleaned
+  ...
+[0m15:12:40.530867 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.10 seconds
+[0m15:12:40.534662 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+EXCHANGE TABLES `public`.`silver_dim_sellers__dbt_backup` AND `public`.`silver_dim_sellers` 
+  
+  ...
+[0m15:12:40.543942 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:40.554412 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_dim_sellers"} */
+drop table if exists `public`.`silver_dim_sellers__dbt_backup` 
+  ...
+[0m15:12:40.607898 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:40.607898 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46C82FF0>]}
+[0m15:12:40.613931 [info ] [Thread-1 (]: 3 of 11 OK created sql table model `public`.`silver_dim_sellers` ............... [[32mOK[0m in 0.40s]
+[0m15:12:40.616039 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_dim_sellers
+[0m15:12:40.616039 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_order_items
+[0m15:12:40.622317 [info ] [Thread-1 (]: 4 of 11 START sql table model `public`.`silver_fact_order_items` ............... [RUN]
+[0m15:12:40.624413 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_dim_sellers, now model.olist_analytics.silver_fact_order_items)
+[0m15:12:40.625494 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_order_items
+[0m15:12:40.648147 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_order_items"
+[0m15:12:40.655464 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_order_items
+[0m15:12:40.666589 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+
+            
+
+    
+        create table `public`.`silver_fact_order_items__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by ((order_id, order_item_id))
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_order_items
+-- Deskripsi    : Membersihkan data item pesanan, memastikan harga dan
+--                freight bernilai positif.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_item`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        shipping_limit_date,
+        -- Harga: null -> 0, negatif -> 0
+        CASE
+            WHEN price IS NULL OR price < 0 THEN 0
+            ELSE price
+        END AS price,
+        -- Freight: null -> 0, negatif -> 0
+        CASE
+            WHEN freight_value IS NULL OR freight_value < 0 THEN 0
+            ELSE freight_value
+        END AS freight_value
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:12:40.755880 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.09 seconds
+[0m15:12:40.765466 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+
+    select name, type from system.columns where table = 'silver_fact_order_items__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:40.786069 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:40.790172 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_order_items"
+[0m15:12:40.790172 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_order_items__dbt_backup`
+        ("order_id", "order_item_id", "product_id", "seller_id", "shipping_limit_date", "price", "freight_value")
+-- ============================================================================
+-- Silver Model: silver_fact_order_items
+-- Deskripsi    : Membersihkan data item pesanan, memastikan harga dan
+--                freight bernilai positif.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_item`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        shipping_limit_date,
+        -- Harga: null -> 0, negatif -> 0
+        CASE
+            WHEN price IS NULL OR price < 0 THEN 0
+            ELSE price
+        END AS price,
+        -- Freight: null -> 0, negatif -> 0
+        CASE
+            WHEN freight_value IS NULL OR freight_value < 0 THEN 0
+            ELSE freight_value
+        END AS freight_value
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:12:42.688588 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 1.89 seconds
+[0m15:12:42.690749 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+EXCHANGE TABLES `public`.`silver_fact_order_items__dbt_backup` AND `public`.`silver_fact_order_items` 
+  
+  ...
+[0m15:12:42.700097 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:42.703113 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_order_items: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_order_items"} */
+drop table if exists `public`.`silver_fact_order_items__dbt_backup` 
+  ...
+[0m15:12:42.759631 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m15:12:42.766039 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46C9B6E0>]}
+[0m15:12:42.770869 [info ] [Thread-1 (]: 4 of 11 OK created sql table model `public`.`silver_fact_order_items` .......... [[32mOK[0m in 2.14s]
+[0m15:12:42.773579 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_order_items
+[0m15:12:42.774149 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_orders
+[0m15:12:42.775257 [info ] [Thread-1 (]: 5 of 11 START sql table model `public`.`silver_fact_orders` .................... [RUN]
+[0m15:12:42.776456 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_order_items, now model.olist_analytics.silver_fact_orders)
+[0m15:12:42.777627 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_orders
+[0m15:12:42.789895 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_orders"
+[0m15:12:42.792837 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_orders
+[0m15:12:42.808947 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+
+            
+
+    
+        create table `public`.`silver_fact_orders__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (order_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_orders
+-- Deskripsi    : Membersihkan data pesanan dan menambahkan kolom flag
+--                untuk memudahkan filtering di model selanjutnya.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        customer_id,
+        order_status,
+        order_purchase_timestamp,
+        order_approved_at,
+        order_delivered_carrier_date,
+        order_delivered_customer_date,
+        order_estimated_delivery_date,
+        -- Flag: Apakah pesanan sudah delivered?
+        CASE
+            WHEN order_status = 'delivered' THEN TRUE
+            ELSE FALSE
+        END AS is_delivered,
+        -- Flag: Apakah pesanan dibatalkan?
+        CASE
+            WHEN order_status IN ('canceled', 'unavailable') THEN TRUE
+            ELSE FALSE
+        END AS is_canceled,
+        -- Durasi konfirmasi pesanan (approved - purchase) dalam jam
+        dateDiff('second', toDateTime(order_purchase_timestamp), toDateTime(order_approved_at)) / 3600.0
+            AS approval_hours
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:12:42.894531 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:12:42.902657 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+
+    select name, type from system.columns where table = 'silver_fact_orders__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:42.958498 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m15:12:42.972922 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_orders"
+[0m15:12:42.980828 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_orders__dbt_backup`
+        ("order_id", "customer_id", "order_status", "order_purchase_timestamp", "order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "is_delivered", "is_canceled", "approval_hours")
+-- ============================================================================
+-- Silver Model: silver_fact_orders
+-- Deskripsi    : Membersihkan data pesanan dan menambahkan kolom flag
+--                untuk memudahkan filtering di model selanjutnya.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        customer_id,
+        order_status,
+        order_purchase_timestamp,
+        order_approved_at,
+        order_delivered_carrier_date,
+        order_delivered_customer_date,
+        order_estimated_delivery_date,
+        -- Flag: Apakah pesanan sudah delivered?
+        CASE
+            WHEN order_status = 'delivered' THEN TRUE
+            ELSE FALSE
+        END AS is_delivered,
+        -- Flag: Apakah pesanan dibatalkan?
+        CASE
+            WHEN order_status IN ('canceled', 'unavailable') THEN TRUE
+            ELSE FALSE
+        END AS is_canceled,
+        -- Durasi konfirmasi pesanan (approved - purchase) dalam jam
+        dateDiff('second', toDateTime(order_purchase_timestamp), toDateTime(order_approved_at)) / 3600.0
+            AS approval_hours
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:12:44.107278 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 1.12 seconds
+[0m15:12:44.114019 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+EXCHANGE TABLES `public`.`silver_fact_orders__dbt_backup` AND `public`.`silver_fact_orders` 
+  
+  ...
+[0m15:12:44.132749 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:44.153341 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_orders"} */
+drop table if exists `public`.`silver_fact_orders__dbt_backup` 
+  ...
+[0m15:12:44.213835 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:44.218977 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46C81250>]}
+[0m15:12:44.219996 [info ] [Thread-1 (]: 5 of 11 OK created sql table model `public`.`silver_fact_orders` ............... [[32mOK[0m in 1.44s]
+[0m15:12:44.223255 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_orders
+[0m15:12:44.224389 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_payments
+[0m15:12:44.224389 [info ] [Thread-1 (]: 6 of 11 START sql table model `public`.`silver_fact_payments` .................. [RUN]
+[0m15:12:44.224389 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_orders, now model.olist_analytics.silver_fact_payments)
+[0m15:12:44.228569 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_payments
+[0m15:12:44.239476 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_payments"
+[0m15:12:44.239476 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_payments
+[0m15:12:44.253779 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+
+            
+
+    
+        create table `public`.`silver_fact_payments__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by ((order_id, payment_sequential))
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_payments
+-- Deskripsi    : Membersihkan data pembayaran per pesanan.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_payment`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        payment_sequential,
+        payment_type,
+        payment_installments,
+        CASE
+            WHEN payment_value IS NULL OR payment_value < 0 THEN 0
+            ELSE payment_value
+        END AS payment_value
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:12:44.337943 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:12:44.353512 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+
+    select name, type from system.columns where table = 'silver_fact_payments__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:44.373474 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:44.382840 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_payments"
+[0m15:12:44.387278 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_payments__dbt_backup`
+        ("order_id", "payment_sequential", "payment_type", "payment_installments", "payment_value")
+-- ============================================================================
+-- Silver Model: silver_fact_payments
+-- Deskripsi    : Membersihkan data pembayaran per pesanan.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_payment`
+),
+cleaned AS (
+    SELECT
+        order_id,
+        payment_sequential,
+        payment_type,
+        payment_installments,
+        CASE
+            WHEN payment_value IS NULL OR payment_value < 0 THEN 0
+            ELSE payment_value
+        END AS payment_value
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:12:44.940920 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.55 seconds
+[0m15:12:44.943506 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+EXCHANGE TABLES `public`.`silver_fact_payments__dbt_backup` AND `public`.`silver_fact_payments` 
+  
+  ...
+[0m15:12:44.950670 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:44.956607 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_payments: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_payments"} */
+drop table if exists `public`.`silver_fact_payments__dbt_backup` 
+  ...
+[0m15:12:45.004859 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:45.006880 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46CF0230>]}
+[0m15:12:45.009792 [info ] [Thread-1 (]: 6 of 11 OK created sql table model `public`.`silver_fact_payments` ............. [[32mOK[0m in 0.78s]
+[0m15:12:45.012765 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_payments
+[0m15:12:45.012765 [debug] [Thread-1 (]: Began running node model.olist_analytics.silver_fact_reviews
+[0m15:12:45.012765 [info ] [Thread-1 (]: 7 of 11 START sql table model `public`.`silver_fact_reviews` ................... [RUN]
+[0m15:12:45.012765 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_payments, now model.olist_analytics.silver_fact_reviews)
+[0m15:12:45.020456 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.silver_fact_reviews
+[0m15:12:45.029501 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.silver_fact_reviews"
+[0m15:12:45.031721 [debug] [Thread-1 (]: Began executing node model.olist_analytics.silver_fact_reviews
+[0m15:12:45.053150 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+
+            
+
+    
+        create table `public`.`silver_fact_reviews__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (review_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Silver Model: silver_fact_reviews
+-- Deskripsi    : Membersihkan data review, menstandarisasi skor review.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_review`
+),
+cleaned AS (
+    SELECT
+        review_id,
+        order_id,
+        -- Skor review: pastikan dalam rentang 1-5
+        CASE
+            WHEN review_score < 1 THEN 1
+            WHEN review_score > 5 THEN 5
+            ELSE review_score
+        END AS review_score,
+        review_comment_title,
+        review_comment_message,
+        review_creation_date,
+        review_answer_timestamp
+    FROM source
+)
+SELECT * FROM cleaned
+          )
+        
+        ...
+[0m15:12:45.166038 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.11 seconds
+[0m15:12:45.175926 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+
+    select name, type from system.columns where table = 'silver_fact_reviews__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:45.196624 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:45.204879 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.silver_fact_reviews"
+[0m15:12:45.204879 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`silver_fact_reviews__dbt_backup`
+        ("review_id", "order_id", "review_score", "review_comment_title", "review_comment_message", "review_creation_date", "review_answer_timestamp")
+-- ============================================================================
+-- Silver Model: silver_fact_reviews
+-- Deskripsi    : Membersihkan data review, menstandarisasi skor review.
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`fact_order_review`
+),
+cleaned AS (
+    SELECT
+        review_id,
+        order_id,
+        -- Skor review: pastikan dalam rentang 1-5
+        CASE
+            WHEN review_score < 1 THEN 1
+            WHEN review_score > 5 THEN 5
+            ELSE review_score
+        END AS review_score,
+        review_comment_title,
+        review_comment_message,
+        review_creation_date,
+        review_answer_timestamp
+    FROM source
+)
+SELECT * FROM cleaned
+  ...
+[0m15:12:46.075524 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.87 seconds
+[0m15:12:46.076665 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+EXCHANGE TABLES `public`.`silver_fact_reviews__dbt_backup` AND `public`.`silver_fact_reviews` 
+  
+  ...
+[0m15:12:46.083835 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:46.091953 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.silver_fact_reviews: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.silver_fact_reviews"} */
+drop table if exists `public`.`silver_fact_reviews__dbt_backup` 
+  ...
+[0m15:12:46.136868 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m15:12:46.140888 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF467311C0>]}
+[0m15:12:46.143034 [info ] [Thread-1 (]: 7 of 11 OK created sql table model `public`.`silver_fact_reviews` .............. [[32mOK[0m in 1.13s]
+[0m15:12:46.143034 [debug] [Thread-1 (]: Finished running node model.olist_analytics.silver_fact_reviews
+[0m15:12:46.145188 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_dim_products
+[0m15:12:46.148034 [info ] [Thread-1 (]: 8 of 11 START sql table model `public`.`gold_dim_products` ..................... [RUN]
+[0m15:12:46.149565 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.silver_fact_reviews, now model.olist_analytics.gold_dim_products)
+[0m15:12:46.152306 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_dim_products
+[0m15:12:46.161851 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_dim_products"
+[0m15:12:46.170689 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_dim_products
+[0m15:12:46.186564 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+
+            
+
+    
+        create table `public`.`gold_dim_products__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (product_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_dim_products
+-- Deskripsi    : Dimension table untuk data produk. Menggabungkan produk
+--                dengan kategori Bahasa Inggris.
+--                Grain: satu baris per produk (product_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_products`
+),
+order_items AS (
+    SELECT
+        product_id,
+        COUNT(DISTINCT order_id)   AS total_orders,
+        SUM(price)                 AS total_revenue,
+        SUM(freight_value)         AS total_freight,
+        COUNT(DISTINCT seller_id)  AS total_sellers
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY product_id
+),
+final AS (
+    SELECT
+        p.product_id                        AS product_id,
+        p.product_category_name             AS product_category_name,
+        p.product_category_english          AS product_category_english,
+        p.product_weight_g                  AS product_weight_g,
+        p.product_length_cm                 AS product_length_cm,
+        p.product_height_cm                 AS product_height_cm,
+        p.product_width_cm                  AS product_width_cm,
+        COALESCE(oi.total_orders, 0)        AS total_orders,
+        COALESCE(oi.total_revenue, 0)       AS total_revenue,
+        COALESCE(oi.total_freight, 0)       AS total_freight,
+        COALESCE(oi.total_sellers, 0)       AS total_sellers
+    FROM source p
+    LEFT JOIN order_items oi ON p.product_id = oi.product_id
+)
+SELECT
+    product_id,
+    product_category_name,
+    product_category_english,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm,
+    product_width_cm,
+    total_orders,
+    total_revenue,
+    total_freight,
+    total_sellers
+FROM final
+          )
+        
+        ...
+[0m15:12:46.270744 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.08 seconds
+[0m15:12:46.276917 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+
+    select name, type from system.columns where table = 'gold_dim_products__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:46.333951 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:46.343891 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_dim_products"
+[0m15:12:46.348609 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_dim_products__dbt_backup`
+        ("product_id", "product_category_name", "product_category_english", "product_weight_g", "product_length_cm", "product_height_cm", "product_width_cm", "total_orders", "total_revenue", "total_freight", "total_sellers")
+-- ============================================================================
+-- Gold Model: gold_dim_products
+-- Deskripsi    : Dimension table untuk data produk. Menggabungkan produk
+--                dengan kategori Bahasa Inggris.
+--                Grain: satu baris per produk (product_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_products`
+),
+order_items AS (
+    SELECT
+        product_id,
+        COUNT(DISTINCT order_id)   AS total_orders,
+        SUM(price)                 AS total_revenue,
+        SUM(freight_value)         AS total_freight,
+        COUNT(DISTINCT seller_id)  AS total_sellers
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY product_id
+),
+final AS (
+    SELECT
+        p.product_id                        AS product_id,
+        p.product_category_name             AS product_category_name,
+        p.product_category_english          AS product_category_english,
+        p.product_weight_g                  AS product_weight_g,
+        p.product_length_cm                 AS product_length_cm,
+        p.product_height_cm                 AS product_height_cm,
+        p.product_width_cm                  AS product_width_cm,
+        COALESCE(oi.total_orders, 0)        AS total_orders,
+        COALESCE(oi.total_revenue, 0)       AS total_revenue,
+        COALESCE(oi.total_freight, 0)       AS total_freight,
+        COALESCE(oi.total_sellers, 0)       AS total_sellers
+    FROM source p
+    LEFT JOIN order_items oi ON p.product_id = oi.product_id
+)
+SELECT
+    product_id,
+    product_category_name,
+    product_category_english,
+    product_weight_g,
+    product_length_cm,
+    product_height_cm,
+    product_width_cm,
+    total_orders,
+    total_revenue,
+    total_freight,
+    total_sellers
+FROM final
+  ...
+[0m15:12:46.981234 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.63 seconds
+[0m15:12:46.988744 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+EXCHANGE TABLES `public`.`gold_dim_products__dbt_backup` AND `public`.`gold_dim_products` 
+  
+  ...
+[0m15:12:47.003327 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:47.021843 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_products: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_products"} */
+drop table if exists `public`.`gold_dim_products__dbt_backup` 
+  ...
+[0m15:12:47.080723 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:47.080723 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46D0DAC0>]}
+[0m15:12:47.080723 [info ] [Thread-1 (]: 8 of 11 OK created sql table model `public`.`gold_dim_products` ................ [[32mOK[0m in 0.93s]
+[0m15:12:47.080723 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_dim_products
+[0m15:12:47.080723 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_dim_customers
+[0m15:12:47.080723 [info ] [Thread-1 (]: 9 of 11 START sql table model `public`.`gold_dim_customers` .................... [RUN]
+[0m15:12:47.080723 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.gold_dim_products, now model.olist_analytics.gold_dim_customers)
+[0m15:12:47.091379 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_dim_customers
+[0m15:12:47.101563 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_dim_customers"
+[0m15:12:47.104035 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_dim_customers
+[0m15:12:47.111638 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+
+            
+
+    
+        create table `public`.`gold_dim_customers__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (customer_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_dim_customers
+-- Deskripsi    : Dimension table untuk data pelanggan. Berisi informasi
+--                demografis dan metrik performa tiap customer.
+--                Grain: satu baris per pelanggan (customer_id).
+-- ============================================================================
+WITH customers AS (
+    SELECT * FROM `public`.`silver_dim_customers`
+),
+orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id,
+        SUM(payment_value) AS total_payment,
+        COUNT(DISTINCT payment_type) AS payment_method_count,
+        groupArray(DISTINCT payment_type) AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id,
+        AVG(review_score) AS avg_review_score,
+        COUNT(review_id) AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+order_details AS (
+    SELECT
+        o.order_id,
+        o.customer_id,
+        o.is_delivered,
+        o.is_canceled,
+        o.order_purchase_timestamp,
+        COALESCE(p.total_payment, 0) AS total_payment,
+        COALESCE(r.avg_review_score, 0) AS avg_review_score
+    FROM orders o
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r ON o.order_id = r.order_id
+),
+customer_summary AS (
+    SELECT
+        c.customer_id,
+        c.customer_unique_id,
+        c.customer_city,
+        c.customer_state,
+        COUNT(DISTINCT o.order_id) AS total_orders,
+        countDistinctIf(o.order_id, o.is_delivered) AS delivered_orders,
+        countDistinctIf(o.order_id, o.is_canceled) AS canceled_orders,
+        SUM(o.total_payment) AS total_revenue,
+        AVG(o.avg_review_score) AS avg_review_score,
+        MIN(o.order_purchase_timestamp) AS first_order_date,
+        MAX(o.order_purchase_timestamp) AS last_order_date
+    FROM customers c
+    LEFT JOIN order_details o ON c.customer_id = o.customer_id
+    GROUP BY
+        c.customer_id, c.customer_unique_id,
+        c.customer_city, c.customer_state
+)
+SELECT
+    customer_id,
+    customer_unique_id,
+    customer_city,
+    customer_state,
+    total_orders,
+    delivered_orders,
+    canceled_orders,
+    CASE
+        WHEN total_orders > 0
+        THEN ROUND(delivered_orders / total_orders, 2)
+        ELSE 0
+    END AS delivery_rate,
+    total_revenue,
+    avg_review_score,
+    first_order_date,
+    last_order_date,
+    CASE
+        WHEN first_order_date IS NOT NULL AND last_order_date IS NOT NULL
+        THEN dateDiff('day', toDateTime(first_order_date), toDateTime(last_order_date))
+        ELSE 0
+    END AS customer_tenure_days
+FROM customer_summary
+          )
+        
+        ...
+[0m15:12:47.219013 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.11 seconds
+[0m15:12:47.224582 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+
+    select name, type from system.columns where table = 'gold_dim_customers__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:47.238400 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:47.242429 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_dim_customers"
+[0m15:12:47.245067 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_dim_customers__dbt_backup`
+        ("customer_id", "customer_unique_id", "customer_city", "customer_state", "total_orders", "delivered_orders", "canceled_orders", "delivery_rate", "total_revenue", "avg_review_score", "first_order_date", "last_order_date", "customer_tenure_days")
+-- ============================================================================
+-- Gold Model: gold_dim_customers
+-- Deskripsi    : Dimension table untuk data pelanggan. Berisi informasi
+--                demografis dan metrik performa tiap customer.
+--                Grain: satu baris per pelanggan (customer_id).
+-- ============================================================================
+WITH customers AS (
+    SELECT * FROM `public`.`silver_dim_customers`
+),
+orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id,
+        SUM(payment_value) AS total_payment,
+        COUNT(DISTINCT payment_type) AS payment_method_count,
+        groupArray(DISTINCT payment_type) AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id,
+        AVG(review_score) AS avg_review_score,
+        COUNT(review_id) AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+order_details AS (
+    SELECT
+        o.order_id,
+        o.customer_id,
+        o.is_delivered,
+        o.is_canceled,
+        o.order_purchase_timestamp,
+        COALESCE(p.total_payment, 0) AS total_payment,
+        COALESCE(r.avg_review_score, 0) AS avg_review_score
+    FROM orders o
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r ON o.order_id = r.order_id
+),
+customer_summary AS (
+    SELECT
+        c.customer_id,
+        c.customer_unique_id,
+        c.customer_city,
+        c.customer_state,
+        COUNT(DISTINCT o.order_id) AS total_orders,
+        countDistinctIf(o.order_id, o.is_delivered) AS delivered_orders,
+        countDistinctIf(o.order_id, o.is_canceled) AS canceled_orders,
+        SUM(o.total_payment) AS total_revenue,
+        AVG(o.avg_review_score) AS avg_review_score,
+        MIN(o.order_purchase_timestamp) AS first_order_date,
+        MAX(o.order_purchase_timestamp) AS last_order_date
+    FROM customers c
+    LEFT JOIN order_details o ON c.customer_id = o.customer_id
+    GROUP BY
+        c.customer_id, c.customer_unique_id,
+        c.customer_city, c.customer_state
+)
+SELECT
+    customer_id,
+    customer_unique_id,
+    customer_city,
+    customer_state,
+    total_orders,
+    delivered_orders,
+    canceled_orders,
+    CASE
+        WHEN total_orders > 0
+        THEN ROUND(delivered_orders / total_orders, 2)
+        ELSE 0
+    END AS delivery_rate,
+    total_revenue,
+    avg_review_score,
+    first_order_date,
+    last_order_date,
+    CASE
+        WHEN first_order_date IS NOT NULL AND last_order_date IS NOT NULL
+        THEN dateDiff('day', toDateTime(first_order_date), toDateTime(last_order_date))
+        ELSE 0
+    END AS customer_tenure_days
+FROM customer_summary
+  ...
+[0m15:12:49.779131 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 2.53 seconds
+[0m15:12:49.783790 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+EXCHANGE TABLES `public`.`gold_dim_customers__dbt_backup` AND `public`.`gold_dim_customers` 
+  
+  ...
+[0m15:12:49.807075 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:49.817978 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_customers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_customers"} */
+drop table if exists `public`.`gold_dim_customers__dbt_backup` 
+  ...
+[0m15:12:49.871092 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:49.877252 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46C7BF20>]}
+[0m15:12:49.879602 [info ] [Thread-1 (]: 9 of 11 OK created sql table model `public`.`gold_dim_customers` ............... [[32mOK[0m in 2.79s]
+[0m15:12:49.879602 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_dim_customers
+[0m15:12:49.879602 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_dim_sellers
+[0m15:12:49.887744 [info ] [Thread-1 (]: 10 of 11 START sql table model `public`.`gold_dim_sellers` ..................... [RUN]
+[0m15:12:49.888675 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.gold_dim_customers, now model.olist_analytics.gold_dim_sellers)
+[0m15:12:49.891013 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_dim_sellers
+[0m15:12:49.932259 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_dim_sellers"
+[0m15:12:49.952348 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_dim_sellers
+[0m15:12:49.974473 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+
+            
+
+    
+        create table `public`.`gold_dim_sellers__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        order by (seller_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_dim_sellers
+-- Deskripsi    : Dimension table untuk data penjual. Berisi informasi
+--                demografis dan metrik performa tiap seller.
+--                Grain: satu baris per penjual (seller_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_sellers`
+),
+order_items AS (
+    SELECT
+        seller_id,
+        COUNT(DISTINCT order_id) AS total_orders,
+        SUM(price)               AS total_revenue,
+        SUM(freight_value)       AS total_freight,
+        COUNT(DISTINCT product_id) AS unique_products
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY seller_id
+),
+reviews AS (
+    SELECT
+        oi.seller_id                      AS seller_id,
+        ROUND(AVG(r.review_score), 2)     AS avg_customer_review,
+        COUNT(r.review_id)                AS total_reviews
+    FROM `public`.`silver_fact_reviews` r
+    JOIN `public`.`silver_fact_order_items` oi
+        ON r.order_id = oi.order_id
+    GROUP BY oi.seller_id
+),
+final AS (
+    SELECT
+        s.seller_id                              AS seller_id,
+        s.seller_city                            AS seller_city,
+        s.seller_state                           AS seller_state,
+        COALESCE(oi.total_orders, 0)             AS total_orders,
+        COALESCE(oi.total_revenue, 0)            AS total_revenue,
+        COALESCE(oi.total_freight, 0)            AS total_freight,
+        COALESCE(oi.unique_products, 0)          AS unique_products,
+        COALESCE(r.avg_customer_review, 0)       AS avg_customer_review,
+        COALESCE(r.total_reviews, 0)             AS total_reviews
+    FROM source s
+    LEFT JOIN order_items oi ON s.seller_id = oi.seller_id
+    LEFT JOIN reviews r      ON s.seller_id = r.seller_id
+)
+SELECT
+    seller_id,
+    seller_city,
+    seller_state,
+    total_orders,
+    total_revenue,
+    total_freight,
+    unique_products,
+    avg_customer_review,
+    total_reviews
+FROM final
+          )
+        
+        ...
+[0m15:12:50.062854 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.09 seconds
+[0m15:12:50.067146 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+
+    select name, type from system.columns where table = 'gold_dim_sellers__dbt_backup'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:50.122378 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m15:12:50.132031 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_dim_sellers"
+[0m15:12:50.136082 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_dim_sellers__dbt_backup`
+        ("seller_id", "seller_city", "seller_state", "total_orders", "total_revenue", "total_freight", "unique_products", "avg_customer_review", "total_reviews")
+-- ============================================================================
+-- Gold Model: gold_dim_sellers
+-- Deskripsi    : Dimension table untuk data penjual. Berisi informasi
+--                demografis dan metrik performa tiap seller.
+--                Grain: satu baris per penjual (seller_id).
+-- ============================================================================
+WITH source AS (
+    SELECT * FROM `public`.`silver_dim_sellers`
+),
+order_items AS (
+    SELECT
+        seller_id,
+        COUNT(DISTINCT order_id) AS total_orders,
+        SUM(price)               AS total_revenue,
+        SUM(freight_value)       AS total_freight,
+        COUNT(DISTINCT product_id) AS unique_products
+    FROM `public`.`silver_fact_order_items`
+    GROUP BY seller_id
+),
+reviews AS (
+    SELECT
+        oi.seller_id                      AS seller_id,
+        ROUND(AVG(r.review_score), 2)     AS avg_customer_review,
+        COUNT(r.review_id)                AS total_reviews
+    FROM `public`.`silver_fact_reviews` r
+    JOIN `public`.`silver_fact_order_items` oi
+        ON r.order_id = oi.order_id
+    GROUP BY oi.seller_id
+),
+final AS (
+    SELECT
+        s.seller_id                              AS seller_id,
+        s.seller_city                            AS seller_city,
+        s.seller_state                           AS seller_state,
+        COALESCE(oi.total_orders, 0)             AS total_orders,
+        COALESCE(oi.total_revenue, 0)            AS total_revenue,
+        COALESCE(oi.total_freight, 0)            AS total_freight,
+        COALESCE(oi.unique_products, 0)          AS unique_products,
+        COALESCE(r.avg_customer_review, 0)       AS avg_customer_review,
+        COALESCE(r.total_reviews, 0)             AS total_reviews
+    FROM source s
+    LEFT JOIN order_items oi ON s.seller_id = oi.seller_id
+    LEFT JOIN reviews r      ON s.seller_id = r.seller_id
+)
+SELECT
+    seller_id,
+    seller_city,
+    seller_state,
+    total_orders,
+    total_revenue,
+    total_freight,
+    unique_products,
+    avg_customer_review,
+    total_reviews
+FROM final
+  ...
+[0m15:12:50.970268 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.83 seconds
+[0m15:12:50.988554 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+EXCHANGE TABLES `public`.`gold_dim_sellers__dbt_backup` AND `public`.`gold_dim_sellers` 
+  
+  ...
+[0m15:12:51.037617 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m15:12:51.051949 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_dim_sellers: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_dim_sellers"} */
+drop table if exists `public`.`gold_dim_sellers__dbt_backup` 
+  ...
+[0m15:12:51.119012 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.07 seconds
+[0m15:12:51.139211 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46D0BB60>]}
+[0m15:12:51.140558 [info ] [Thread-1 (]: 10 of 11 OK created sql table model `public`.`gold_dim_sellers` ................ [[32mOK[0m in 1.25s]
+[0m15:12:51.148813 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_dim_sellers
+[0m15:12:51.148813 [debug] [Thread-1 (]: Began running node model.olist_analytics.gold_fct_orders
+[0m15:12:51.150825 [info ] [Thread-1 (]: 11 of 11 START sql incremental model `public`.`gold_fct_orders` ................ [RUN]
+[0m15:12:51.152838 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_analytics.gold_dim_sellers, now model.olist_analytics.gold_fct_orders)
+[0m15:12:51.152838 [debug] [Thread-1 (]: Began compiling node model.olist_analytics.gold_fct_orders
+[0m15:12:51.167298 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_analytics.gold_fct_orders"
+[0m15:12:51.171804 [debug] [Thread-1 (]: Began executing node model.olist_analytics.gold_fct_orders
+[0m15:12:51.300229 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+drop table if exists `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1` 
+  ...
+[0m15:12:51.354939 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:51.364105 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+            
+
+    
+        create table `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1`
+        
+  
+        
+  engine = ReplacingMergeTree()
+        order by (order_id)
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS allow_nullable_key=1, replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            
+-- ============================================================================
+-- Gold Model: gold_fct_orders
+-- Deskripsi    : Fact table untuk data pesanan. Menggabungkan order dengan
+--                item, payment, dan review untuk analitik end-to-end.
+--                Grain: satu baris per order (order_id).
+-- ============================================================================
+WITH orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id                              AS order_id,
+        SUM(payment_value)                    AS total_payment,
+        COUNT(DISTINCT payment_type)          AS payment_method_count,
+        groupArrayDistinct(payment_type)      AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id                              AS order_id,
+        AVG(review_score)                     AS avg_review_score,
+        COUNT(review_id)                      AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+joined AS (
+    SELECT
+        o.order_id                                          AS order_id,
+        o.customer_id                                       AS customer_id,
+        o.order_status                                      AS order_status,
+        o.is_delivered                                      AS is_delivered,
+        o.is_canceled                                       AS is_canceled,
+        o.order_purchase_timestamp                          AS order_purchase_timestamp,
+        o.order_approved_at                                 AS order_approved_at,
+        o.order_delivered_customer_date                     AS order_delivered_customer_date,
+        o.approval_hours                                    AS approval_hours,
+        COUNT(DISTINCT i.order_item_id)                     AS item_count,
+        SUM(i.price)                                        AS total_price,
+        SUM(i.freight_value)                                AS total_freight,
+        SUM(i.price + i.freight_value)                      AS total_order_value,
+        COUNT(DISTINCT i.product_id)                        AS unique_products,
+        COUNT(DISTINCT i.seller_id)                         AS unique_sellers,
+        COALESCE(p.total_payment, 0)                        AS total_payment,
+        COALESCE(p.payment_method_count, 0)                 AS payment_method_count,
+        p.payment_types                                     AS payment_types,
+        COALESCE(r.avg_review_score, 0)                     AS avg_review_score,
+        COALESCE(r.review_count, 0)                         AS review_count
+    FROM orders o
+    LEFT JOIN items i    ON o.order_id = i.order_id
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r  ON o.order_id = r.order_id
+    GROUP BY
+        o.order_id, o.customer_id, o.order_status,
+        o.is_delivered, o.is_canceled,
+        o.order_purchase_timestamp, o.order_approved_at,
+        o.order_delivered_customer_date, o.approval_hours,
+        p.total_payment, p.payment_method_count, p.payment_types,
+        r.avg_review_score, r.review_count
+)
+SELECT
+    order_id,
+    customer_id,
+    order_status,
+    is_delivered,
+    is_canceled,
+    order_purchase_timestamp,
+    order_approved_at,
+    order_delivered_customer_date,
+    approval_hours,
+    item_count,
+    total_price,
+    total_freight,
+    total_order_value,
+    unique_products,
+    unique_sellers,
+    total_payment,
+    payment_method_count,
+    payment_types,
+    avg_review_score,
+    review_count
+FROM joined
+WHERE is_canceled = 0
+          )
+        
+        ...
+[0m15:12:51.719784 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.35 seconds
+[0m15:12:51.736092 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+    select name, type from system.columns where table = 'gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:51.755540 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:51.767965 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_analytics.gold_fct_orders"
+[0m15:12:51.772032 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+        
+  
+    
+    
+    
+        
+         
+
+
+        
+  
+
+  insert into `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1`
+        ("order_id", "customer_id", "order_status", "is_delivered", "is_canceled", "order_purchase_timestamp", "order_approved_at", "order_delivered_customer_date", "approval_hours", "item_count", "total_price", "total_freight", "total_order_value", "unique_products", "unique_sellers", "total_payment", "payment_method_count", "payment_types", "avg_review_score", "review_count")
+-- ============================================================================
+-- Gold Model: gold_fct_orders
+-- Deskripsi    : Fact table untuk data pesanan. Menggabungkan order dengan
+--                item, payment, dan review untuk analitik end-to-end.
+--                Grain: satu baris per order (order_id).
+-- ============================================================================
+WITH orders AS (
+    SELECT * FROM `public`.`silver_fact_orders`
+),
+items AS (
+    SELECT * FROM `public`.`silver_fact_order_items`
+),
+payments AS (
+    SELECT
+        order_id                              AS order_id,
+        SUM(payment_value)                    AS total_payment,
+        COUNT(DISTINCT payment_type)          AS payment_method_count,
+        groupArrayDistinct(payment_type)      AS payment_types
+    FROM `public`.`silver_fact_payments`
+    GROUP BY order_id
+),
+reviews AS (
+    SELECT
+        order_id                              AS order_id,
+        AVG(review_score)                     AS avg_review_score,
+        COUNT(review_id)                      AS review_count
+    FROM `public`.`silver_fact_reviews`
+    GROUP BY order_id
+),
+joined AS (
+    SELECT
+        o.order_id                                          AS order_id,
+        o.customer_id                                       AS customer_id,
+        o.order_status                                      AS order_status,
+        o.is_delivered                                      AS is_delivered,
+        o.is_canceled                                       AS is_canceled,
+        o.order_purchase_timestamp                          AS order_purchase_timestamp,
+        o.order_approved_at                                 AS order_approved_at,
+        o.order_delivered_customer_date                     AS order_delivered_customer_date,
+        o.approval_hours                                    AS approval_hours,
+        COUNT(DISTINCT i.order_item_id)                     AS item_count,
+        SUM(i.price)                                        AS total_price,
+        SUM(i.freight_value)                                AS total_freight,
+        SUM(i.price + i.freight_value)                      AS total_order_value,
+        COUNT(DISTINCT i.product_id)                        AS unique_products,
+        COUNT(DISTINCT i.seller_id)                         AS unique_sellers,
+        COALESCE(p.total_payment, 0)                        AS total_payment,
+        COALESCE(p.payment_method_count, 0)                 AS payment_method_count,
+        p.payment_types                                     AS payment_types,
+        COALESCE(r.avg_review_score, 0)                     AS avg_review_score,
+        COALESCE(r.review_count, 0)                         AS review_count
+    FROM orders o
+    LEFT JOIN items i    ON o.order_id = i.order_id
+    LEFT JOIN payments p ON o.order_id = p.order_id
+    LEFT JOIN reviews r  ON o.order_id = r.order_id
+    GROUP BY
+        o.order_id, o.customer_id, o.order_status,
+        o.is_delivered, o.is_canceled,
+        o.order_purchase_timestamp, o.order_approved_at,
+        o.order_delivered_customer_date, o.approval_hours,
+        p.total_payment, p.payment_method_count, p.payment_types,
+        r.avg_review_score, r.review_count
+)
+SELECT
+    order_id,
+    customer_id,
+    order_status,
+    is_delivered,
+    is_canceled,
+    order_purchase_timestamp,
+    order_approved_at,
+    order_delivered_customer_date,
+    approval_hours,
+    item_count,
+    total_price,
+    total_freight,
+    total_order_value,
+    unique_products,
+    unique_sellers,
+    total_payment,
+    payment_method_count,
+    payment_types,
+    avg_review_score,
+    review_count
+FROM joined
+WHERE is_canceled = 0
+  
+      ...
+[0m15:12:54.281358 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 2.51 seconds
+[0m15:12:54.284025 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+      
+            delete from `public`.`gold_fct_orders` where (order_id) in (select order_id
+                                          from `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1`)
+      
+    ...
+[0m15:12:54.562360 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.28 seconds
+[0m15:12:54.568360 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+    select name, type from system.columns where table = 'gold_fct_orders'
+    
+      
+        and database = 'public'
+      
+    
+    order by position
+  ...
+[0m15:12:54.582162 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m15:12:54.583679 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+
+        insert into `public`.`gold_fct_orders` select "order_id", "customer_id", "order_status", "is_delivered", "is_canceled", "order_purchase_timestamp", "order_approved_at", "order_delivered_customer_date", "approval_hours", "item_count", "total_price", "total_freight", "total_order_value", "unique_products", "unique_sellers", "total_payment", "payment_method_count", "payment_types", "avg_review_score", "review_count" from `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1` 
+    ...
+[0m15:12:55.184232 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.60 seconds
+[0m15:12:55.184232 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+drop table if exists `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1` 
+  ...
+[0m15:12:55.201815 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.02 seconds
+[0m15:12:55.208667 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_analytics.gold_fct_orders: /* {"app": "dbt", "dbt_version": "1.11.12", "profile_name": "olist_analytics", "target_name": "dev", "node_id": "model.olist_analytics.gold_fct_orders"} */
+drop table if exists `public`.`gold_fct_orders__dbt_distributed_new_data` 
+  ...
+[0m15:12:55.256653 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m15:12:55.258927 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4002095f-b9aa-4758-8284-bedbbce91da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF46CF1490>]}
+[0m15:12:55.262072 [info ] [Thread-1 (]: 11 of 11 OK created sql incremental model `public`.`gold_fct_orders` ........... [[32mOK[0m in 4.11s]
+[0m15:12:55.262672 [debug] [Thread-1 (]: Finished running node model.olist_analytics.gold_fct_orders
+[0m15:12:55.262672 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:12:55.262672 [debug] [MainThread]: Connection 'list_' was left open.
+[0m15:12:55.268581 [debug] [MainThread]: On list_: Close
+[0m15:12:55.268581 [debug] [MainThread]: Connection 'list__public' was left open.
+[0m15:12:55.268581 [debug] [MainThread]: On list__public: Close
+[0m15:12:55.268581 [debug] [MainThread]: Connection 'model.olist_analytics.gold_fct_orders' was left open.
+[0m15:12:55.268581 [debug] [MainThread]: On model.olist_analytics.gold_fct_orders: Close
+[0m15:12:55.268581 [info ] [MainThread]: 
+[0m15:12:55.272115 [info ] [MainThread]: Finished running 1 incremental model, 10 table models in 0 hours 0 minutes and 18.89 seconds (18.89s).
+[0m15:12:55.302129 [debug] [MainThread]: Command end result
+[0m15:12:55.433294 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Nusacode\pertemuan4\olist_analytics\target\manifest.json
+[0m15:12:55.442619 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Nusacode\pertemuan4\olist_analytics\target\semantic_manifest.json
+[0m15:12:55.466887 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Nusacode\pertemuan4\olist_analytics\target\run_results.json
+[0m15:12:55.466887 [info ] [MainThread]: 
+[0m15:12:55.471800 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:12:55.473816 [info ] [MainThread]: 
+[0m15:12:55.473816 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=11
+[0m15:12:55.482310 [debug] [MainThread]: Command `dbt run` succeeded at 15:12:55.482310 after 22.76 seconds
+[0m15:12:55.484328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF4119A8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF41AA38C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF43DE6D20>]}
+[0m15:12:55.484328 [debug] [MainThread]: Flushing usage events
+[0m15:12:59.281969 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: public
+    database: public
+    schema: public
+    tables:
+      - name: dim_customer
+      - name: dim_product
+      - name: dim_product_category
+      - name: dim_seller
+      - name: fact_order
+      - name: fact_order_item
+      - name: fact_order_payment
+      - name: fact_order_review
+
+models:
+  - name: silver_dim_customers
+    description: "Data pelanggan yang sudah dibersihkan dan distandarisasi."
+  - name: silver_dim_products
+    description: "Data produk digabung dengan terjemahan kategori."
+  - name: silver_dim_sellers
+    description: "Data penjual yang sudah dibersihkan."
+  - name: silver_fact_orders
+    description: "Data pesanan dengan flag status tambahan."
+  - name: silver_fact_order_items
+    description: "Data item pesanan dengan validasi harga dan ongkir."
+  - name: silver_fact_payments
+    description: "Data pembayaran per pesanan."
+  - name: silver_fact_reviews
+    description: "Data review dengan skor yang sudah divalidasi."
