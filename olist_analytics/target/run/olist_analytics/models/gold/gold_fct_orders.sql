@@ -11,7 +11,7 @@
         
   
 
-  insert into `public`.`gold_fct_orders__dbt_new_data_4002095f_b9aa_4758_8284_bedbbce91da1`
+  insert into `public`.`gold_fct_orders__dbt_new_data_2a6f7f16_9d78_49f0_aba3_7452556b9e9f`
         ("order_id", "customer_id", "order_status", "is_delivered", "is_canceled", "order_purchase_timestamp", "order_approved_at", "order_delivered_customer_date", "approval_hours", "item_count", "total_price", "total_freight", "total_order_value", "unique_products", "unique_sellers", "total_payment", "payment_method_count", "payment_types", "avg_review_score", "review_count")
 -- ============================================================================
 -- Gold Model: gold_fct_orders
